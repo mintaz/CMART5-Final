@@ -122,6 +122,7 @@
             this.btn_discount.LargeGlyph = global::CMART5.Properties.Resources.megaphone_2_icon;
             this.btn_discount.LargeWidth = 70;
             this.btn_discount.Name = "btn_discount";
+            this.btn_discount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_discount_ItemClick);
             // 
             // ribbonPage1
             // 

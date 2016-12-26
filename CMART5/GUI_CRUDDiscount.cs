@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CMART5
 {
-    public partial class GUI_CRUDHistoryPrice : Form
+    public partial class GUI_CRUDDiscount : Form
     {
-        public GUI_CRUDHistoryPrice()
+        public GUI_CRUDDiscount()
         {
             InitializeComponent();
         }
 
-        private void GUI_CRUDHistoryPrice_Load(object sender, EventArgs e)
+        private void GUI_CRUDDiscount_Load(object sender, EventArgs e)
         {
 
         }

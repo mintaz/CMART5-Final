@@ -110,5 +110,20 @@ namespace CMART5
             }
 
         }
+
+        private void btn_discount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_Discount));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_Discount fhm = new GUI_Discount();
+                fhm.MdiParent = this;
+                fhm.Show();
+            }
+        }
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="GUI_CRUDAccount.Designer.cs">
       <DependentUpon>GUI_CRUDAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_CRUDDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_CRUDDiscount.Designer.cs">
+      <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_CRUDHistoryPrice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="GUI_CRUDSupplier.Designer.cs">
       <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Discount.Designer.cs">
+      <DependentUpon>GUI_Discount.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_HistoryPrice.cs">
       <SubType>Form</SubType>
@@ -142,6 +154,9 @@
     <EmbeddedResource Include="GUI_CRUDAccount.resx">
       <DependentUpon>GUI_CRUDAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_CRUDDiscount.resx">
+      <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_CRUDHistoryPrice.resx">
       <DependentUpon>GUI_CRUDHistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_CRUDSupplier.resx">
       <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Discount.resx">
+      <DependentUpon>GUI_Discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_HistoryPrice.resx">
       <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
