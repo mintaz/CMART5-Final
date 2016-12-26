@@ -107,6 +107,7 @@
             this.btn_historyprice.LargeGlyph = global::CMART5.Properties.Resources.File_History_icon;
             this.btn_historyprice.LargeWidth = 70;
             this.btn_historyprice.Name = "btn_historyprice";
+            this.btn_historyprice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_historyprice_ItemClick);
             // 
             // ribbonPageGroup3
             // 

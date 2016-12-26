@@ -30,3 +30,5 @@ C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\bin\Debug\CMART5.pdb
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI_CRUDSupplier.resources
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI_Supplier.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI_CRUDHistoryPrice.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI_HistoryPrice.resources

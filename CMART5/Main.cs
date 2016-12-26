@@ -58,22 +58,22 @@ namespace CMART5
             }
             else
             {
-                GUI_Supplier fpm = new GUI_Supplier();
-                fpm.MdiParent = this;
-                fpm.Show();
+                GUI_Supplier fsm = new GUI_Supplier();
+                fsm.MdiParent = this;
+                fsm.Show();
             }
         }
 
         private void btn_product_type_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.checkexist(typeof(GUI_Supplier));
+            Form frm = this.checkexist(typeof(GUI_ProductType));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                GUI_Supplier fpm = new GUI_Supplier();
+                GUI_ProductType fpm = new GUI_ProductType();
                 fpm.MdiParent = this;
                 fpm.Show();
             }
@@ -93,6 +93,22 @@ namespace CMART5
                 fdm.MdiParent = this;
                 fdm.Show();
             }
+        }
+
+        private void btn_historyprice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_HistoryPrice));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_HistoryPrice fhm = new GUI_HistoryPrice();
+                fhm.MdiParent = this;
+                fhm.Show();
+            }
+
         }
     }
 }

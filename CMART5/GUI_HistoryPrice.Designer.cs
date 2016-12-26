@@ -1,6 +1,6 @@
 ﻿namespace CMART5
 {
-    partial class GUI_Product
+    partial class GUI_HistoryPrice
     {
         /// <summary>
         /// Required designer variable.
@@ -39,18 +39,14 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.gcProduct = new DevExpress.XtraGrid.GridControl();
-            this.gvProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcHistory = new DevExpress.XtraGrid.GridControl();
+            this.gvHistory = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.TENSP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.loaisanpham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HINHANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NHACC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rptimage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.PRICE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rptimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -146,98 +142,73 @@
             this.barDockControlRight.Location = new System.Drawing.Point(784, 32);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 362);
             // 
-            // gcProduct
+            // gcHistory
             // 
-            this.gcProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcProduct.Location = new System.Drawing.Point(0, 32);
-            this.gcProduct.MainView = this.gvProduct;
-            this.gcProduct.MenuManager = this.barManager1;
-            this.gcProduct.Name = "gcProduct";
-            this.gcProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rptimage});
-            this.gcProduct.Size = new System.Drawing.Size(784, 362);
-            this.gcProduct.TabIndex = 4;
-            this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvProduct});
+            this.gcHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcHistory.Location = new System.Drawing.Point(0, 32);
+            this.gcHistory.MainView = this.gvHistory;
+            this.gcHistory.MenuManager = this.barManager1;
+            this.gcHistory.Name = "gcHistory";
+            this.gcHistory.Size = new System.Drawing.Size(784, 362);
+            this.gcHistory.TabIndex = 4;
+            this.gcHistory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvHistory});
             // 
-            // gvProduct
+            // gvHistory
             // 
-            this.gvProduct.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.ID,
+            this.gvHistory.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TENSP,
-            this.loaisanpham,
-            this.HINHANH,
-            this.NHACC});
-            this.gvProduct.GridControl = this.gcProduct;
-            this.gvProduct.Name = "gvProduct";
-            this.gvProduct.OptionsFind.AlwaysVisible = true;
-            this.gvProduct.OptionsFind.ShowFindButton = false;
-            this.gvProduct.OptionsView.ShowGroupPanel = false;
-            this.gvProduct.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProduct_FocusedRowChanged);
-            this.gvProduct.DoubleClick += new System.EventHandler(this.gvProduct_DoubleClick);
-            // 
-            // ID
-            // 
-            this.ID.Caption = "ID";
-            this.ID.FieldName = "idSANPHAM";
-            this.ID.Name = "ID";
-            this.ID.Visible = true;
-            this.ID.VisibleIndex = 0;
+            this.PRICE,
+            this.DATE});
+            this.gvHistory.GridControl = this.gcHistory;
+            this.gvHistory.Name = "gvHistory";
+            this.gvHistory.OptionsFind.AlwaysVisible = true;
+            this.gvHistory.OptionsFind.ShowFindButton = false;
+            this.gvHistory.OptionsView.ShowGroupPanel = false;
+            this.gvHistory.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvAccount_FocusedRowChanged);
+            this.gvHistory.DoubleClick += new System.EventHandler(this.gvAccount_DoubleClick);
             // 
             // TENSP
             // 
             this.TENSP.Caption = "Tên Sản Phẩm";
-            this.TENSP.FieldName = "TENSP";
+            this.TENSP.FieldName = "SANPHAM.TENSP";
             this.TENSP.Name = "TENSP";
             this.TENSP.Visible = true;
-            this.TENSP.VisibleIndex = 1;
+            this.TENSP.VisibleIndex = 0;
             // 
-            // loaisanpham
+            // PRICE
             // 
-            this.loaisanpham.Caption = "Loại Sản Phẩm";
-            this.loaisanpham.FieldName = "LOAISANPHAM.TENLOAI";
-            this.loaisanpham.Name = "loaisanpham";
-            this.loaisanpham.Visible = true;
-            this.loaisanpham.VisibleIndex = 2;
+            this.PRICE.Caption = "Giá Bán";
+            this.PRICE.FieldName = "GIABAN";
+            this.PRICE.Name = "PRICE";
+            this.PRICE.Visible = true;
+            this.PRICE.VisibleIndex = 1;
             // 
-            // HINHANH
+            // DATE
             // 
-            this.HINHANH.Caption = "Hình Ảnh";
-            this.HINHANH.FieldName = "HINHANH";
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.Visible = true;
-            this.HINHANH.VisibleIndex = 3;
+            this.DATE.Caption = "Ngày Hiệu Lực";
+            this.DATE.FieldName = "NGAYHIEULUC";
+            this.DATE.Name = "DATE";
+            this.DATE.Visible = true;
+            this.DATE.VisibleIndex = 2;
             // 
-            // NHACC
-            // 
-            this.NHACC.Caption = "Nhà Cung Cấp";
-            this.NHACC.FieldName = "NHACUNGCAP.TENNHACUNGCAP";
-            this.NHACC.Name = "NHACC";
-            this.NHACC.Visible = true;
-            this.NHACC.VisibleIndex = 4;
-            // 
-            // rptimage
-            // 
-            this.rptimage.Name = "rptimage";
-            // 
-            // GUI_Product
+            // GUI_HistoryPrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 394);
-            this.Controls.Add(this.gcProduct);
+            this.Controls.Add(this.gcHistory);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "GUI_Product";
-            this.Text = "GUI_Product";
+            this.Name = "GUI_HistoryPrice";
+            this.Text = "GUI_HistoryPrice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.GUI_Product_Load);
+            this.Load += new System.EventHandler(this.GUI_HistoryPrice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rptimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,13 +226,10 @@
         private DevExpress.XtraBars.BarButtonItem btnEdit;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnreload;
-        private DevExpress.XtraGrid.GridControl gcProduct;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvProduct;
-        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.GridControl gcHistory;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvHistory;
         private DevExpress.XtraGrid.Columns.GridColumn TENSP;
-        private DevExpress.XtraGrid.Columns.GridColumn loaisanpham;
-        private DevExpress.XtraGrid.Columns.GridColumn HINHANH;
-        private DevExpress.XtraGrid.Columns.GridColumn NHACC;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit rptimage;
+        private DevExpress.XtraGrid.Columns.GridColumn PRICE;
+        private DevExpress.XtraGrid.Columns.GridColumn DATE;
     }
 }

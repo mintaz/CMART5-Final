@@ -163,6 +163,7 @@
             this.gvProductype.GridControl = this.gcProductype;
             this.gvProductype.Name = "gvProductype";
             this.gvProductype.OptionsFind.AlwaysVisible = true;
+            this.gvProductype.OptionsFind.ShowFindButton = false;
             this.gvProductype.OptionsView.ShowGroupPanel = false;
             this.gvProductype.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProductype_FocusedRowChanged);
             this.gvProductype.DoubleClick += new System.EventHandler(this.gvProductype_DoubleClick);
