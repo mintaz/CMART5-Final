@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace CMART5
 {
-    public partial class GUI_Product : Form
+    public partial class GUI_Supplier : Form
     {
-        public GUI_Product()
+        public GUI_Supplier()
         {
             InitializeComponent();
         }
@@ -22,15 +22,11 @@ namespace CMART5
         private void loadData()
         {
             dbl = new Cmart5DataContext();
-            var ds = dbl.SANPHAMs.ToList();
-            gcProduct.DataSource = ds;
-            rptimage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            rptimage.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            rptimage.BestFitWidth = 100;
-            gvProduct.Columns.ColumnByFieldName("HINHANH").ColumnEdit = rptimage;
+            var ds = dbl.NHACUNGCAPs.ToList();
+            gcAccount.DataSource = ds;
         }
 
-        private void GUI_Product_Load(object sender, EventArgs e)
+        private void GUI_Supplier_Load(object sender, EventArgs e)
         {
             loadData();
 
@@ -38,13 +34,13 @@ namespace CMART5
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GUI_CRUDProduct fzm = new GUI_CRUDProduct();
+            GUI_CRUDSupplier fzm = new GUI_CRUDSupplier();
             //fzm.isthem = true;
             fzm.ShowDialog();
             loadData();
         }
 
-        private void gvProduct_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gvAccount_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             index = e.FocusedRowHandle;
 
@@ -52,19 +48,19 @@ namespace CMART5
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GUI_CRUDProduct frm = new GUI_CRUDProduct();
+            GUI_CRUDSupplier frm = new GUI_CRUDSupplier();
             //frm.isthem = false;
-            //frm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
+            //frm.idTK = gvAccount.GetRowCellValue(index, this.ID).ToString();
             frm.ShowDialog();
             loadData();
 
         }
 
-        private void gvProduct_DoubleClick(object sender, EventArgs e)
+        private void gvAccount_DoubleClick(object sender, EventArgs e)
         {
-            GUI_CRUDProduct fnm = new GUI_CRUDProduct();
+            GUI_CRUDSupplier fnm = new GUI_CRUDSupplier();
             //fnm.isthem = false;
-            //fnm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
+            //fnm.idTK = gvAccount.GetRowCellValue(index, this.ID).ToString();
             fnm.ShowDialog();
             loadData();
         }
@@ -73,11 +69,11 @@ namespace CMART5
         {
             //try
             //{
-            //    if (XtraMessageBox.Show("Bạn có chắc chắn xóa sản phẩm này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    if (XtraMessageBox.Show("Bạn có chắc chắn xóa tài khoản này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             //    {
             //        Cmart5DataContext dbx = new Cmart5DataContext();
-            //        var taikhoan = dbx.SANPHAMs.Where(a => a.idSANPHAM == gvProduct.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
-            //        dbx.SANPHAMs.DeleteOnSubmit(taikhoan);
+            //        var NHACUNGCAP = dbx.NHACUNGCAPs.Where(a => a.idNHACUNGCAP == gvAccount.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
+            //        dbx.NHACUNGCAPs.DeleteOnSubmit(NHACUNGCAP);
             //        dbx.SubmitChanges();
             //        XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
             //    }

@@ -51,23 +51,48 @@ namespace CMART5
 
         private void btn_supplier_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
-        }
-
-        private void btn_product_type_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.checkexist(typeof(GUI_ProductType));
+            Form frm = this.checkexist(typeof(GUI_Supplier));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                GUI_ProductType fpm = new GUI_ProductType();
+                GUI_Supplier fpm = new GUI_Supplier();
+                fpm.MdiParent = this;
+                fpm.Show();
+            }
+        }
+
+        private void btn_product_type_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_Supplier));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_Supplier fpm = new GUI_Supplier();
                 fpm.MdiParent = this;
                 fpm.Show();
             }
 
+        }
+
+        private void btn_product_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_Product));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_Product fdm = new GUI_Product();
+                fdm.MdiParent = this;
+                fdm.Show();
+            }
         }
     }
 }

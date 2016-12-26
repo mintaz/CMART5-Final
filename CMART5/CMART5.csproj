@@ -88,6 +88,12 @@
     <Compile Include="GUI_CRUDProductType.Designer.cs">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_CRUDSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_CRUDSupplier.Designer.cs">
+      <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="GUI_ProductType.Designer.cs">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Supplier.Designer.cs">
+      <DependentUpon>GUI_Supplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -124,11 +136,17 @@
     <EmbeddedResource Include="GUI_CRUDProductType.resx">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_CRUDSupplier.resx">
+      <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Product.resx">
       <DependentUpon>GUI_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_ProductType.resx">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Supplier.resx">
+      <DependentUpon>GUI_Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

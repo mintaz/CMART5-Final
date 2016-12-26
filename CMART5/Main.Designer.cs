@@ -98,6 +98,7 @@
             this.btn_product.LargeGlyph = global::CMART5.Properties.Resources.product_icon;
             this.btn_product.LargeWidth = 70;
             this.btn_product.Name = "btn_product";
+            this.btn_product.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_product_ItemClick);
             // 
             // btn_historyprice
             // 
