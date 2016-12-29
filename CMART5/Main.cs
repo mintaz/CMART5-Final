@@ -125,5 +125,20 @@ namespace CMART5
                 fhm.Show();
             }
         }
+
+        private void btn_HQimport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_HQTicket));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_HQTicket fhqt = new GUI_HQTicket();
+                fhqt.MdiParent = this;
+                fhqt.Show();
+            }
+        }
     }
 }

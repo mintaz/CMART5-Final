@@ -43,6 +43,7 @@
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -59,6 +60,8 @@
     <Compile Include="BUS\BUS_Account.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
     <Compile Include="BUS\BUS_ProductType.cs" />
+    <Compile Include="BUS\BUS_Supplier.cs" />
+    <Compile Include="BUS\BUS_Tickets.cs" />
     <Compile Include="Cmart5.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +121,12 @@
     <Compile Include="GUI_HistoryPrice.Designer.cs">
       <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_HQTicketInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_HQTicketInfo.Designer.cs">
+      <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +138,12 @@
     </Compile>
     <Compile Include="GUI_ProductType.Designer.cs">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_HQTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_HQTicket.Designer.cs">
+      <DependentUpon>GUI_HQTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_Supplier.cs">
       <SubType>Form</SubType>
@@ -175,11 +190,17 @@
     <EmbeddedResource Include="GUI_HistoryPrice.resx">
       <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_HQTicketInfo.resx">
+      <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Product.resx">
       <DependentUpon>GUI_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_ProductType.resx">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_HQTicket.resx">
+      <DependentUpon>GUI_HQTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Supplier.resx">
       <DependentUpon>GUI_Supplier.cs</DependentUpon>
@@ -203,6 +224,8 @@
       <LastGenOutput>Cmart5.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\PHIEUNHAPHANGTRUSO.datasource" />
+    <None Include="Properties\DataSources\SANPHAM.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -266,6 +289,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
