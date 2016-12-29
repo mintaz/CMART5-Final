@@ -35,7 +35,7 @@ namespace CMART5
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GUI_CRUDSupplier fzm = new GUI_CRUDSupplier();
-            fzm.isthem = true;
+            //fzm.isthem = true;
             fzm.ShowDialog();
             loadData();
         }
