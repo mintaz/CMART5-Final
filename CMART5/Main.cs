@@ -15,6 +15,7 @@ namespace CMART5
         {
             InitializeComponent();
         }
+        public int auth;
 
         //kiem tra form ton tai
         private Form checkexist(Type ftype)
@@ -31,7 +32,56 @@ namespace CMART5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (auth == 1)
+            {
+                pagecatalog.Visible = true;
+                pageimport.Visible = false;
+                pagereceipt.Visible = false;
+                pagerevenue.Visible = true;
+                pagesystem.Visible = true;
+            }else if(auth == 2)
+            {
+                pagecatalog.Visible = false;
+                pageimport.Visible = true;
+                btn_BRimport.Enabled = true;
+                btn_HQimport.Enabled = false;
+                btn_Request.Enabled = false;
+                pagereceipt.Visible = false;
+                pagerevenue.Visible = false;
+                pagesystem.Visible = true;
+                btn_account_management.Enabled = false;
+            }else if( auth ==3)
+            {
+                pagecatalog.Visible = false;
+                pageimport.Visible = true;
+                btn_BRimport.Enabled = false;
+                btn_HQimport.Enabled = true;
+                btn_Request.Enabled = false;
+                pagereceipt.Visible = false;
+                pagerevenue.Visible = false;
+                pagesystem.Visible = true;
+                btn_account_management.Enabled = false;
+            }else if(auth ==4)
+            {
+                pagecatalog.Visible = false;
+                pageimport.Visible = false;
+                pagereceipt.Visible = true;
+                pagerevenue.Visible = false;
+                pagesystem.Visible = true;
+                btn_account_management.Enabled = false;
+            }else if (auth ==5)
+            {
+                pagecatalog.Visible = false;
+                pageimport.Visible = true;
+                btn_BRimport.Enabled = false;
+                btn_HQimport.Enabled = false;
+                btn_Request.Enabled = true;
+                pagereceipt.Visible = false;
+                pagerevenue.Visible = false;
+                pagesystem.Visible = true;
+                btn_account_management.Enabled = false;
+            }
+            
         }
 
         private void btn_account_management_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

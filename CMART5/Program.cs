@@ -20,7 +20,7 @@ namespace CMART5
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new Main());
+            Application.Run(new GUI_Login());
         }
     }
 }

@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v15.1" />
     <Reference Include="DevExpress.Data.v15.1" />
     <Reference Include="DevExpress.Printing.v15.1.Core" />
@@ -45,8 +46,11 @@
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,10 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_Account.cs" />
+    <Compile Include="BUS\BUS_Login.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
     <Compile Include="BUS\BUS_ProductType.cs" />
     <Compile Include="BUS\BUS_Supplier.cs" />
     <Compile Include="BUS\BUS_Tickets.cs" />
+    <Compile Include="BUS\BUS_Validation.cs" />
     <Compile Include="Cmart5.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="GUI_HQTicketInfo.Designer.cs">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Login.Designer.cs">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_Product.cs">
       <SubType>Form</SubType>
@@ -192,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_HQTicketInfo.resx">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Login.resx">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Product.resx">
       <DependentUpon>GUI_Product.cs</DependentUpon>

@@ -16,5 +16,30 @@ namespace CMART5
         {
             InitializeComponent();
         }
+        BUS.BUS_Supplier bussup = new BUS.BUS_Supplier();
+        string idSup;
+        bool isthem;
+
+        private void GUI_CRUDSupplier_Load(object sender, EventArgs e)
+        {
+            if (!isthem)
+            {
+                bussup.loadSupplier(idSup,txtname,txtaddress,txtphone);
+            }
+            else
+            {
+                txtname.EditValue = "";
+                txtaddress.EditValue = "";
+                txtphone.EditValue = "";
+
+            }
+        }
+
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bussup.AddEditSupplier(isthem, idSup, txtname, txtaddress, txtphone);
+
+        }
+
     }
 }

@@ -31,28 +31,28 @@
             this.components = new System.ComponentModel.Container();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
+            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtphone = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtname = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtaddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtname = new DevExpress.XtraEditors.TextEdit();
+            this.txtphone = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +81,13 @@
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Caption = "Lưu Lại";
+            this.btnSave.Id = 0;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -123,6 +130,33 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Location = new System.Drawing.Point(105, 36);
+            this.txtaddress.MenuManager = this.barManager1;
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(324, 20);
+            this.txtaddress.StyleController = this.layoutControl1;
+            this.txtaddress.TabIndex = 6;
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(105, 12);
+            this.txtname.MenuManager = this.barManager1;
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(324, 20);
+            this.txtname.StyleController = this.layoutControl1;
+            this.txtname.TabIndex = 5;
+            // 
+            // txtphone
+            // 
+            this.txtphone.Location = new System.Drawing.Point(105, 60);
+            this.txtphone.MenuManager = this.barManager1;
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(324, 20);
+            this.txtphone.StyleController = this.layoutControl1;
+            this.txtphone.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -136,15 +170,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(441, 115);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // txtphone
-            // 
-            this.txtphone.Location = new System.Drawing.Point(105, 60);
-            this.txtphone.MenuManager = this.barManager1;
-            this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(324, 20);
-            this.txtphone.StyleController = this.layoutControl1;
-            this.txtphone.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtphone;
@@ -153,15 +178,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(421, 47);
             this.layoutControlItem1.Text = "Số Điện Thoại";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(90, 13);
-            // 
-            // txtname
-            // 
-            this.txtname.Location = new System.Drawing.Point(105, 12);
-            this.txtname.MenuManager = this.barManager1;
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(324, 20);
-            this.txtname.StyleController = this.layoutControl1;
-            this.txtname.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -172,15 +188,6 @@
             this.layoutControlItem2.Text = "Tên Nhà Cung Cấp";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(90, 13);
             // 
-            // txtaddress
-            // 
-            this.txtaddress.Location = new System.Drawing.Point(105, 36);
-            this.txtaddress.MenuManager = this.barManager1;
-            this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(324, 20);
-            this.txtaddress.StyleController = this.layoutControl1;
-            this.txtaddress.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtaddress;
@@ -189,12 +196,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(421, 24);
             this.layoutControlItem3.Text = "Địa Chỉ";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(90, 13);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Caption = "Lưu Lại";
-            this.btnSave.Id = 0;
-            this.btnSave.Name = "btnSave";
             // 
             // GUI_CRUDSupplier
             // 
@@ -208,15 +209,16 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "GUI_CRUDSupplier";
             this.Text = "GUI_CRUDSupplier";
+            this.Load += new System.EventHandler(this.GUI_CRUDSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
