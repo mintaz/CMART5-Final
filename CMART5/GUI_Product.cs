@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Collections;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace CMART5
 {
@@ -24,10 +26,6 @@ namespace CMART5
             dbl = new Cmart5DataContext();
             var ds = dbl.SANPHAMs.ToList();
             gcProduct.DataSource = ds;
-            rptimage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            rptimage.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            rptimage.BestFitWidth = 100;
-            gvProduct.Columns.ColumnByFieldName("HINHANH").ColumnEdit = rptimage;
         }
 
         private void GUI_Product_Load(object sender, EventArgs e)
@@ -71,27 +69,85 @@ namespace CMART5
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //try
-            //{
-            //    if (XtraMessageBox.Show("Bạn có chắc chắn xóa sản phẩm này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        Cmart5DataContext dbx = new Cmart5DataContext();
-            //        var taikhoan = dbx.SANPHAMs.Where(a => a.idSANPHAM == gvProduct.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
-            //        dbx.SANPHAMs.DeleteOnSubmit(taikhoan);
-            //        dbx.SubmitChanges();
-            //        XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
-            //    }
-            //}
-            //catch (Exception er)
-            //{
-            //    XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
-            //}
+            try
+            {
+                if (XtraMessageBox.Show("Bạn có chắc chắn xóa sản phẩm này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Cmart5DataContext dbx = new Cmart5DataContext();
+                    var sanpham = dbx.SANPHAMs.Where(a => a.idSANPHAM == gvProduct.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
+                    dbx.SANPHAMs.DeleteOnSubmit(sanpham);
+                    dbx.SubmitChanges();
+                    XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
+                }
+            }
+            catch (Exception er)
+            {
+                XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
+            }
             loadData();
         }
 
         private void btnreload_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             loadData();
+        }
+        string ImageDir = @"Images\";
+
+        Hashtable Images = new Hashtable();
+
+
+
+        string GetFileName(string color)
+        {
+
+            if (color == null || color == string.Empty)
+
+                return string.Empty;
+
+            return color + ".jpg";
+
+        }
+
+        private void gvProduct_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.Column.FieldName == "HINHANH" && e.IsGetData)
+            {
+
+                GridView view = sender as GridView;
+
+
+
+                string colorName = (string)((DataRowView)e.Row)["ID"];
+
+                string fileName = GetFileName(colorName).ToLower();
+
+                if (!Images.ContainsKey(fileName))
+                {
+
+                    Image img = null;
+
+                    try
+                    {
+
+                        string filePath = DevExpress.Utils.FilesHelper.FindingFileName(Application.StartupPath, ImageDir + fileName, false);
+
+                        img = Image.FromFile(filePath);
+
+                    }
+
+                    catch
+                    {
+
+                    }
+
+                    Images.Add(fileName, img);
+
+                }
+
+                e.Value = Images[fileName];
+
+            }
+
         }
     }
 }

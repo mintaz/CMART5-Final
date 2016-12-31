@@ -13,7 +13,7 @@ namespace CMART5.BUS
         Cmart5DataContext dbt, dbl;
 
 
-        public void AddEditProductType(bool check, string idLSP, DevExpress.XtraEditors.TextEdit txtname, DevExpress.XtraEditors.TextEdit txtsoluong )
+        public void AddEditProductType(bool check, string idLSP, DevExpress.XtraEditors.TextEdit txtname )
         {
             dbt = new Cmart5DataContext();
             LOAISANPHAM lsp;
@@ -43,7 +43,7 @@ namespace CMART5.BUS
                 lsp = dbt.LOAISANPHAMs.Where(a => a.idLOAISANPHAM == idLSP).SingleOrDefault();
             }
             lsp.TENLOAI = txtname.EditValue.ToString();
-            lsp.SOLUONG = Int32.Parse(txtsoluong.EditValue.ToString());
+            lsp.SOLUONG = 0;
             if (check == true)
             {
                 dbt.LOAISANPHAMs.InsertOnSubmit(lsp);

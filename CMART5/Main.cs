@@ -190,5 +190,10 @@ namespace CMART5
                 fhqt.Show();
             }
         }
+
+        private void btn_logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

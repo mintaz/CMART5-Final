@@ -78,6 +78,10 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSave)});
+            this.bar2.OptionsBar.AllowQuickCustomization = false;
+            this.bar2.OptionsBar.DisableCustomization = true;
+            this.bar2.OptionsBar.DrawBorder = false;
+            this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -94,7 +98,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(441, 22);
+            this.barDockControlTop.Size = new System.Drawing.Size(441, 20);
             // 
             // barDockControlBottom
             // 
@@ -107,15 +111,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 115);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 117);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(441, 22);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 115);
+            this.barDockControlRight.Location = new System.Drawing.Point(441, 20);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 117);
             // 
             // layoutControl1
             // 
@@ -123,10 +127,10 @@
             this.layoutControl1.Controls.Add(this.txtname);
             this.layoutControl1.Controls.Add(this.txtphone);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 20);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(441, 115);
+            this.layoutControl1.Size = new System.Drawing.Size(441, 117);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -167,7 +171,7 @@
             this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(441, 115);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(441, 117);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -175,7 +179,7 @@
             this.layoutControlItem1.Control = this.txtphone;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(421, 47);
+            this.layoutControlItem1.Size = new System.Drawing.Size(421, 49);
             this.layoutControlItem1.Text = "Số Điện Thoại";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(90, 13);
             // 

@@ -23,19 +23,21 @@ namespace CMART5
        
         private void GUI_CRUDProductType_Load(object sender, EventArgs e)
         {
+            txtsoluong.Enabled = false;
             if(!isthem)
             {
-                bus.loadProductType(idLSP, txtname, txtsoluong);
+                
+                bus.loadProductType(idLSP, txtname,txtsoluong);
             }
             else
             {
                 txtname.EditValue = "";
-                txtsoluong.EditValue = "";
+                
             }
         }
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bus.AddEditProductType(isthem, idLSP, txtname, txtsoluong);
+            bus.AddEditProductType(isthem, idLSP, txtname);
 
         }
 

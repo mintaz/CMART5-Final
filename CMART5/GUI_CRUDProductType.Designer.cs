@@ -37,19 +37,19 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtsoluong = new DevExpress.XtraEditors.TextEdit();
             this.txtname = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtsoluong = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtsoluong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsoluong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -125,15 +125,6 @@
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // txtsoluong
-            // 
-            this.txtsoluong.Location = new System.Drawing.Point(60, 36);
-            this.txtsoluong.MenuManager = this.barManager1;
-            this.txtsoluong.Name = "txtsoluong";
-            this.txtsoluong.Size = new System.Drawing.Size(344, 20);
-            this.txtsoluong.StyleController = this.layoutControl1;
-            this.txtsoluong.TabIndex = 5;
-            // 
             // txtname
             // 
             this.txtname.Location = new System.Drawing.Point(60, 12);
@@ -173,6 +164,15 @@
             this.layoutControlItem2.Text = "Số Lượng";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(45, 13);
             // 
+            // txtsoluong
+            // 
+            this.txtsoluong.Location = new System.Drawing.Point(60, 36);
+            this.txtsoluong.MenuManager = this.barManager1;
+            this.txtsoluong.Name = "txtsoluong";
+            this.txtsoluong.Size = new System.Drawing.Size(344, 20);
+            this.txtsoluong.StyleController = this.layoutControl1;
+            this.txtsoluong.TabIndex = 5;
+            // 
             // GUI_CRUDProductType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,11 +189,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtsoluong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsoluong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,10 +209,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnSave;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.TextEdit txtsoluong;
         private DevExpress.XtraEditors.TextEdit txtname;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.TextEdit txtsoluong;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

@@ -163,6 +163,7 @@
             this.btn_logout.LargeGlyph = global::CMART5.Properties.Resources.Apps_session_logout_icon;
             this.btn_logout.LargeWidth = 70;
             this.btn_logout.Name = "btn_logout";
+            this.btn_logout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_logout_ItemClick);
             // 
             // ribbonControl1
             // 

@@ -17,8 +17,8 @@ namespace CMART5
             InitializeComponent();
         }
         BUS.BUS_Supplier bussup = new BUS.BUS_Supplier();
-        string idSup;
-        bool isthem;
+        public string idSup;
+        public bool isthem;
 
         private void GUI_CRUDSupplier_Load(object sender, EventArgs e)
         {

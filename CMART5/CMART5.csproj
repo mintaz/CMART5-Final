@@ -79,6 +79,12 @@
     <Compile Include="GUI_Account.Designer.cs">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ChangePass.Designer.cs">
+      <DependentUpon>GUI_ChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_CRUDAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </None>
     <EmbeddedResource Include="GUI_Account.resx">
       <DependentUpon>GUI_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ChangePass.resx">
+      <DependentUpon>GUI_ChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_CRUDAccount.resx">
       <DependentUpon>GUI_CRUDAccount.cs</DependentUpon>
@@ -307,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

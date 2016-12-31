@@ -174,6 +174,7 @@
             this.gvProduct.OptionsFind.ShowFindButton = false;
             this.gvProduct.OptionsView.ShowGroupPanel = false;
             this.gvProduct.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProduct_FocusedRowChanged);
+            this.gvProduct.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gvProduct_CustomUnboundColumnData);
             this.gvProduct.DoubleClick += new System.EventHandler(this.gvProduct_DoubleClick);
             // 
             // ID

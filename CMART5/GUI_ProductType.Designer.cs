@@ -77,6 +77,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnreload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar2.OptionsBar.AllowQuickCustomization = false;
+            this.bar2.OptionsBar.DisableCustomization = true;
+            this.bar2.OptionsBar.DrawBorder = false;
+            this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -162,6 +166,7 @@
             this.SOLUONG});
             this.gvProductype.GridControl = this.gcProductype;
             this.gvProductype.Name = "gvProductype";
+            this.gvProductype.OptionsDetail.EnableMasterViewMode = false;
             this.gvProductype.OptionsFind.AlwaysVisible = true;
             this.gvProductype.OptionsFind.ShowFindButton = false;
             this.gvProductype.OptionsView.ShowGroupPanel = false;

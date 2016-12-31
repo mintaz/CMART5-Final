@@ -39,14 +39,14 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.gcAccount = new DevExpress.XtraGrid.GridControl();
-            this.gvAccount = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcSupplier = new DevExpress.XtraGrid.GridControl();
+            this.gvSupplier = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENNHACUNGCAP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SDTHOAI = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcAccount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -77,6 +77,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnreload, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar2.OptionsBar.AllowQuickCustomization = false;
+            this.bar2.OptionsBar.DisableCustomization = true;
+            this.bar2.OptionsBar.DrawBorder = false;
+            this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -142,30 +146,35 @@
             this.barDockControlRight.Location = new System.Drawing.Point(784, 32);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 362);
             // 
-            // gcAccount
+            // gcSupplier
             // 
-            this.gcAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcAccount.Location = new System.Drawing.Point(0, 32);
-            this.gcAccount.MainView = this.gvAccount;
-            this.gcAccount.MenuManager = this.barManager1;
-            this.gcAccount.Name = "gcAccount";
-            this.gcAccount.Size = new System.Drawing.Size(784, 362);
-            this.gcAccount.TabIndex = 4;
-            this.gcAccount.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvAccount});
+            this.gcSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcSupplier.Location = new System.Drawing.Point(0, 32);
+            this.gcSupplier.MainView = this.gvSupplier;
+            this.gcSupplier.MenuManager = this.barManager1;
+            this.gcSupplier.Name = "gcSupplier";
+            this.gcSupplier.Size = new System.Drawing.Size(784, 362);
+            this.gcSupplier.TabIndex = 4;
+            this.gcSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSupplier});
             // 
-            // gvAccount
+            // gvSupplier
             // 
-            this.gvAccount.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvSupplier.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
             this.TENNHACUNGCAP,
             this.SDTHOAI});
-            this.gvAccount.GridControl = this.gcAccount;
-            this.gvAccount.Name = "gvAccount";
-            this.gvAccount.OptionsFind.AlwaysVisible = true;
-            this.gvAccount.OptionsView.ShowGroupPanel = false;
-            this.gvAccount.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvAccount_FocusedRowChanged);
-            this.gvAccount.DoubleClick += new System.EventHandler(this.gvAccount_DoubleClick);
+            this.gvSupplier.GridControl = this.gcSupplier;
+            this.gvSupplier.Name = "gvSupplier";
+            this.gvSupplier.OptionsBehavior.Editable = false;
+            this.gvSupplier.OptionsDetail.EnableMasterViewMode = false;
+            this.gvSupplier.OptionsFind.AlwaysVisible = true;
+            this.gvSupplier.OptionsFind.FindDelay = 250;
+            this.gvSupplier.OptionsFind.FindNullPrompt = "Nhập từ khóa tìm kiếm...";
+            this.gvSupplier.OptionsFind.ShowFindButton = false;
+            this.gvSupplier.OptionsView.ShowGroupPanel = false;
+            this.gvSupplier.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvSupplier_FocusedRowChanged);
+            this.gvSupplier.DoubleClick += new System.EventHandler(this.gvSupplier_DoubleClick);
             // 
             // ID
             // 
@@ -196,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 394);
-            this.Controls.Add(this.gcAccount);
+            this.Controls.Add(this.gcSupplier);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -206,8 +215,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GUI_Supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcAccount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSupplier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,8 +234,8 @@
         private DevExpress.XtraBars.BarButtonItem btnEdit;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnreload;
-        private DevExpress.XtraGrid.GridControl gcAccount;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvAccount;
+        private DevExpress.XtraGrid.GridControl gcSupplier;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn TENNHACUNGCAP;
         private DevExpress.XtraGrid.Columns.GridColumn SDTHOAI;
