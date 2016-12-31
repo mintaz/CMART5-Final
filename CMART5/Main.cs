@@ -212,5 +212,22 @@ namespace CMART5
                 fchange.Show();
             }
         }
+
+        private void btn_Request_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI.GUI_RequestTicket));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI.GUI_RequestTicket frequest = new GUI.GUI_RequestTicket();
+                frequest.MdiParent = this;
+                frequest.idacc = idacc;
+                frequest.Show();
+            }
+
+        }
     }
 }

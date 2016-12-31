@@ -203,6 +203,7 @@
             this.btn_Request.LargeGlyph = global::CMART5.Properties.Resources.Order_history_icon;
             this.btn_Request.LargeWidth = 70;
             this.btn_Request.Name = "btn_Request";
+            this.btn_Request.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Request_ItemClick);
             // 
             // btn_HQimport
             // 

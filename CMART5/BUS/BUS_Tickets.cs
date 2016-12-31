@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CMART5.BUS
 {
@@ -32,13 +33,15 @@ namespace CMART5.BUS
                 }
                 HQT.idPHIEUDEXUAT = idRequest;
                 HQT.NGAYNHAP = RQT.NGAYDEXUAT;
-                HQT.TONGTIEN = 0;
+                HQT.SOLUONG = 0;
                 HQT.idTAIKHOAN = idAccount;
                 db.PHIEUNHAPHANGTRUSOs.InsertOnSubmit(HQT);
                 db.SubmitChanges();
+                MessageBox.Show("Thêm thành công");
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show("Lỗi:\n" + e.Message + "\n vui lòng kiểm tra lại");
             }
         }
         public void AddHQTicketInfo(string idHQTicket, string idProduct, int quantity, string status, int price, DateTime expdate)
@@ -69,7 +72,7 @@ namespace CMART5.BUS
                 CTPHIEUNHAPHANGTRUSO s = dbu.CTPHIEUNHAPHANGTRUSOs.Single(st => st.idPHIEUTRUSO == idTicket && st.idSANPHAM == idProduct);
                 List<CTPHIEUNHAPHANGTRUSO> list = dbu.CTPHIEUNHAPHANGTRUSOs.ToList().Where(st => st.idPHIEUTRUSO == idTicket).ToList();
                 PHIEUNHAPHANGTRUSO hq = dbu.PHIEUNHAPHANGTRUSOs.Single(st => st.idPHIEUTRUSO == idTicket);
-                hq.TONGTIEN = list.Sum(t => t.SOLUONG); //database sai, dich nham amount thanh tien 
+                hq.SOLUONG = list.Sum(t => t.SOLUONG); 
 
                 s.SOLUONG = quantity;
                 s.GIANHAP = price;
@@ -146,6 +149,37 @@ namespace CMART5.BUS
             }
             catch (Exception)
             {
+            }
+        }
+        public void AddRQTicket(ComboBox cbncc, string idAccount)
+        {
+            try
+            {
+                Cmart5DataContext db = new Cmart5DataContext();
+                PHIEUDEXUAT dx = new PHIEUDEXUAT();
+                string year = (DateTime.Now.Year % 100).ToString();
+                try
+                {
+                    List<PHIEUDEXUAT> r = db.PHIEUDEXUATs.ToList().Where(st => st.idPHIEUDEXUAT.Substring(2, 2) == year).ToList();
+                    string max = r.Max(t => t.idPHIEUDEXUAT);
+                    int idnumber = int.Parse(max.Substring(4, 4)) + 1;
+                    string maxId = "DX" + year + idnumber.ToString().PadLeft(4, '0');
+                    dx.idPHIEUDEXUAT = maxId;
+                }
+                catch (NullReferenceException)
+                {
+                    dx.idPHIEUDEXUAT = "DX" + year + "0001";
+                }
+                dx.NGAYDEXUAT = DateTime.Now.Date;
+                dx.idNHACUNGCAP = cbncc.SelectedValue.ToString();
+                dx.idTAIKHOAN = idAccount;    
+                db.PHIEUDEXUATs.InsertOnSubmit(dx);
+                db.SubmitChanges();
+                MessageBox.Show("Thêm thành công");
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message+"\n có thể do kết nối server, vui lòng kiểm tra lại.");
             }
         }
 

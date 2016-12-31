@@ -3046,8 +3046,8 @@ namespace CMART5
     partial void OnidPHIEUDEXUATChanged();
     partial void OnNGAYNHAPChanging(System.DateTime value);
     partial void OnNGAYNHAPChanged();
-    partial void OnTONGTIENChanging(double value);
-    partial void OnTONGTIENChanged();
+    partial void OnSOLUONGChanging(double value);
+    partial void OnSOLUONGChanged();
     partial void OnidTAIKHOANChanging(string value);
     partial void OnidTAIKHOANChanged();
     #endregion
@@ -3126,7 +3126,7 @@ namespace CMART5
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Float NOT NULL")]
-		public double TONGTIEN
+		public double SOLUONG
 		{
 			get
 			{
@@ -3136,11 +3136,11 @@ namespace CMART5
 			{
 				if ((this._TONGTIEN != value))
 				{
-					this.OnTONGTIENChanging(value);
+					this.OnSOLUONGChanging(value);
 					this.SendPropertyChanging();
 					this._TONGTIEN = value;
-					this.SendPropertyChanged("TONGTIEN");
-					this.OnTONGTIENChanged();
+					this.SendPropertyChanged("SOLUONG");
+					this.OnSOLUONGChanged();
 				}
 			}
 		}

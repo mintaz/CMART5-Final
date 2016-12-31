@@ -17,13 +17,15 @@ namespace CMART5
             InitializeComponent();
         }
         int index;
+        public string idacc;
+        BUS.BUS_Tickets bushq = new BUS.BUS_Tickets();
         private void loadData()
         {
             Cmart5DataContext dbl = new Cmart5DataContext();
             var ds = dbl.PHIEUNHAPHANGTRUSOs.ToList();
             gcHQticket.DataSource = ds;
-            lkRequest.Properties.DataSource = new Cmart5DataContext().PHIEUDEXUATs;
-            lkRequest.Properties.ValueMember = "idPHIEUDEXUAT";
+            cborequest.DataSource = dbl.PHIEUDEXUATs.ToList();
+            cborequest.ValueMember = "idPHIEUDEXUAT";
         }
 
         private void GUI_HQTicket_Load(object sender, EventArgs e)
@@ -48,8 +50,8 @@ namespace CMART5
 
         private void btn_AddTick_Click(object sender, EventArgs e)
         {
-            string idRequest = lkRequest.EditValue.ToString();
-            
+            string idRequest = cborequest.SelectedValue.ToString();
+            bushq.AddHQTicket(idRequest, idacc);    
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -58,6 +60,7 @@ namespace CMART5
             fhq.IDtick = gvHQticket.GetRowCellValue(index, this.IDHQ).ToString();
             btn_AddTick.Enabled = false;
             fhq.ShowDialog();
+            //this.Enabled = false;
             loadData();
             btn_AddTick.Enabled = true;
         }

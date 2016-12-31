@@ -116,6 +116,12 @@
     <Compile Include="GUI\GUI_CRUDProductType.Designer.cs">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_CRUDRequestTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_CRUDRequestTicket.Designer.cs">
+      <DependentUpon>GUI_CRUDRequestTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_CRUDSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,12 @@
     <Compile Include="GUI\GUI_HQTicket.Designer.cs">
       <DependentUpon>GUI_HQTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_RequestTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_RequestTicket.Designer.cs">
+      <DependentUpon>GUI_RequestTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +221,9 @@
     <EmbeddedResource Include="GUI\GUI_CRUDProductType.resx">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_CRUDRequestTicket.resx">
+      <DependentUpon>GUI_CRUDRequestTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_CRUDSupplier.resx">
       <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_HQTicket.resx">
       <DependentUpon>GUI_HQTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_RequestTicket.resx">
+      <DependentUpon>GUI_RequestTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Supplier.resx">
       <DependentUpon>GUI_Supplier.cs</DependentUpon>
@@ -337,6 +355,7 @@
     <Content Include="Images\15541592_309455492788768_2272475361586540796_n.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\MH160011.jpg" />
+    <None Include="Resources\addfile_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
