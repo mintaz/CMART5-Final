@@ -44,13 +44,13 @@
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENSP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.loaisanpham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HINHANH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.NHACC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rptimage = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.HINHANH = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rptimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -154,7 +154,7 @@
             this.gcProduct.MenuManager = this.barManager1;
             this.gcProduct.Name = "gcProduct";
             this.gcProduct.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rptimage});
+            this.repositoryItemPictureEdit1});
             this.gcProduct.Size = new System.Drawing.Size(784, 362);
             this.gcProduct.TabIndex = 4;
             this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -170,11 +170,11 @@
             this.NHACC});
             this.gvProduct.GridControl = this.gcProduct;
             this.gvProduct.Name = "gvProduct";
+            this.gvProduct.OptionsDetail.EnableMasterViewMode = false;
             this.gvProduct.OptionsFind.AlwaysVisible = true;
             this.gvProduct.OptionsFind.ShowFindButton = false;
             this.gvProduct.OptionsView.ShowGroupPanel = false;
             this.gvProduct.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProduct_FocusedRowChanged);
-            this.gvProduct.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gvProduct_CustomUnboundColumnData);
             this.gvProduct.DoubleClick += new System.EventHandler(this.gvProduct_DoubleClick);
             // 
             // ID
@@ -201,13 +201,9 @@
             this.loaisanpham.Visible = true;
             this.loaisanpham.VisibleIndex = 2;
             // 
-            // HINHANH
+            // repositoryItemPictureEdit1
             // 
-            this.HINHANH.Caption = "Hình Ảnh";
-            this.HINHANH.FieldName = "HINHANH";
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.Visible = true;
-            this.HINHANH.VisibleIndex = 3;
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             // 
             // NHACC
             // 
@@ -217,9 +213,13 @@
             this.NHACC.Visible = true;
             this.NHACC.VisibleIndex = 4;
             // 
-            // rptimage
+            // HINHANH
             // 
-            this.rptimage.Name = "rptimage";
+            this.HINHANH.Caption = "Hình Ảnh";
+            this.HINHANH.FieldName = "HINHANH";
+            this.HINHANH.Name = "HINHANH";
+            this.HINHANH.Visible = true;
+            this.HINHANH.VisibleIndex = 3;
             // 
             // GUI_Product
             // 
@@ -238,7 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rptimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,8 +261,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn TENSP;
         private DevExpress.XtraGrid.Columns.GridColumn loaisanpham;
-        private DevExpress.XtraGrid.Columns.GridColumn HINHANH;
         private DevExpress.XtraGrid.Columns.GridColumn NHACC;
-        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit rptimage;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn HINHANH;
     }
 }

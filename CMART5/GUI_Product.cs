@@ -37,7 +37,7 @@ namespace CMART5
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GUI_CRUDProduct fzm = new GUI_CRUDProduct();
-            //fzm.isthem = true;
+            fzm.isthem = true;
             fzm.ShowDialog();
             loadData();
         }
@@ -51,8 +51,8 @@ namespace CMART5
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GUI_CRUDProduct frm = new GUI_CRUDProduct();
-            //frm.isthem = false;
-            //frm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
+            frm.isthem = false;
+            frm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
             frm.ShowDialog();
             loadData();
 
@@ -61,8 +61,8 @@ namespace CMART5
         private void gvProduct_DoubleClick(object sender, EventArgs e)
         {
             GUI_CRUDProduct fnm = new GUI_CRUDProduct();
-            //fnm.isthem = false;
-            //fnm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
+            fnm.isthem = false;
+            fnm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
             fnm.ShowDialog();
             loadData();
         }
@@ -91,63 +91,8 @@ namespace CMART5
         {
             loadData();
         }
-        string ImageDir = @"Images\";
 
-        Hashtable Images = new Hashtable();
-
-
-
-        string GetFileName(string color)
-        {
-
-            if (color == null || color == string.Empty)
-
-                return string.Empty;
-
-            return color + ".jpg";
-
-        }
-
-        private void gvProduct_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            if (e.Column.FieldName == "HINHANH" && e.IsGetData)
-            {
-
-                GridView view = sender as GridView;
-
-
-
-                string colorName = (string)((DataRowView)e.Row)["ID"];
-
-                string fileName = GetFileName(colorName).ToLower();
-
-                if (!Images.ContainsKey(fileName))
-                {
-
-                    Image img = null;
-
-                    try
-                    {
-
-                        string filePath = DevExpress.Utils.FilesHelper.FindingFileName(Application.StartupPath, ImageDir + fileName, false);
-
-                        img = Image.FromFile(filePath);
-
-                    }
-
-                    catch
-                    {
-
-                    }
-
-                    Images.Add(fileName, img);
-
-                }
-
-                e.Value = Images[fileName];
-
-            }
-
-        }
+        
+        
     }
 }
