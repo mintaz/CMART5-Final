@@ -31,6 +31,7 @@ namespace CMART5
                 if (loginval.validate(txtusename,txtpass))
                 {
                     int i = loginval.Authorize(txtusename, txtpass);
+                    string idac = loginval.getID(txtusename, txtpass);
                     if (i == 0)
                     {
                         MessageBox.Show("Sai Tên đăng nhập hoặc mật khẩu");
@@ -39,6 +40,7 @@ namespace CMART5
                     {
                         Main mainform = new Main();
                         mainform.auth = i;
+                        mainform.idacc = idac;
                         mainform.FormClosing += delegate { this.Show(); };
                         mainform.Show();
                         this.Hide();

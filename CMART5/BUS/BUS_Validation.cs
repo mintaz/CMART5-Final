@@ -96,7 +96,26 @@ namespace CMART5.BUS
             }
             return true;
         }
+        public bool Compare(DevExpress.XtraEditors.TextEdit t1, DevExpress.XtraEditors.TextEdit t2)
+        {
+            string tmp1 = t1.EditValue.ToString();
+            string tmp2 = t1.EditValue.ToString();
+            if (tmp1 != tmp2)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Compare(TextBox t1, string t)
+        {
+            string tmp1 = t1.Text.ToString();
+            if (tmp1 != t)
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool Compare(DevExpress.XtraEditors.TextEdit t1, string t)
         {
             string tmp1 = t1.Text.ToString();
             if (tmp1 != t)

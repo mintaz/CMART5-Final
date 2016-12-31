@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_Account.cs" />
+    <Compile Include="BUS\BUS_ChangePass.cs" />
     <Compile Include="BUS\BUS_Login.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
     <Compile Include="BUS\BUS_ProductType.cs" />
@@ -73,100 +74,100 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Cmart5.dbml</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Account.cs">
+    <Compile Include="GUI\GUI_Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Account.Designer.cs">
+    <Compile Include="GUI\GUI_Account.Designer.cs">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_ChangePass.cs">
+    <Compile Include="GUI\GUI_ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_ChangePass.Designer.cs">
+    <Compile Include="GUI\GUI_ChangePass.Designer.cs">
       <DependentUpon>GUI_ChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDAccount.cs">
+    <Compile Include="GUI\GUI_CRUDAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDAccount.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDAccount.Designer.cs">
       <DependentUpon>GUI_CRUDAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDDiscount.cs">
+    <Compile Include="GUI\GUI_CRUDDiscount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDDiscount.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDDiscount.Designer.cs">
       <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDHistoryPrice.cs">
+    <Compile Include="GUI\GUI_CRUDHistoryPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDHistoryPrice.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDHistoryPrice.Designer.cs">
       <DependentUpon>GUI_CRUDHistoryPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDProduct.cs">
+    <Compile Include="GUI\GUI_CRUDProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDProduct.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDProduct.Designer.cs">
       <DependentUpon>GUI_CRUDProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDProductType.cs">
+    <Compile Include="GUI\GUI_CRUDProductType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDProductType.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDProductType.Designer.cs">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_CRUDSupplier.cs">
+    <Compile Include="GUI\GUI_CRUDSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_CRUDSupplier.Designer.cs">
+    <Compile Include="GUI\GUI_CRUDSupplier.Designer.cs">
       <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Discount.cs">
+    <Compile Include="GUI\GUI_Discount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Discount.Designer.cs">
+    <Compile Include="GUI\GUI_Discount.Designer.cs">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_HistoryPrice.cs">
+    <Compile Include="GUI\GUI_HistoryPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_HistoryPrice.Designer.cs">
+    <Compile Include="GUI\GUI_HistoryPrice.Designer.cs">
       <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_HQTicketInfo.cs">
+    <Compile Include="GUI\GUI_HQTicketInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_HQTicketInfo.Designer.cs">
+    <Compile Include="GUI\GUI_HQTicketInfo.Designer.cs">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Login.cs">
+    <Compile Include="GUI\GUI_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Login.Designer.cs">
+    <Compile Include="GUI\GUI_Login.Designer.cs">
       <DependentUpon>GUI_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Product.cs">
+    <Compile Include="GUI\GUI_Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Product.Designer.cs">
+    <Compile Include="GUI\GUI_Product.Designer.cs">
       <DependentUpon>GUI_Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_ProductType.cs">
+    <Compile Include="GUI\GUI_ProductType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_ProductType.Designer.cs">
+    <Compile Include="GUI\GUI_ProductType.Designer.cs">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_HQTicket.cs">
+    <Compile Include="GUI\GUI_HQTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_HQTicket.Designer.cs">
+    <Compile Include="GUI\GUI_HQTicket.Designer.cs">
       <DependentUpon>GUI_HQTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Supplier.cs">
+    <Compile Include="GUI\GUI_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Supplier.Designer.cs">
+    <Compile Include="GUI\GUI_Supplier.Designer.cs">
       <DependentUpon>GUI_Supplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -178,55 +179,61 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
+    <None Include="bin\Debug\CMART5.exe.config" />
+    <None Include="bin\Debug\CMART5.vshost.exe.config" />
+    <None Include="bin\Debug\CMART5.vshost.exe.manifest" />
+    <None Include="bin\Release\CMART5.exe.config" />
+    <None Include="bin\Release\CMART5.vshost.exe.config" />
+    <None Include="bin\Release\CMART5.vshost.exe.manifest" />
     <None Include="Cmart5.dbml.layout">
       <DependentUpon>Cmart5.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="GUI_Account.resx">
+    <EmbeddedResource Include="GUI\GUI_Account.resx">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_ChangePass.resx">
+    <EmbeddedResource Include="GUI\GUI_ChangePass.resx">
       <DependentUpon>GUI_ChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDAccount.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDAccount.resx">
       <DependentUpon>GUI_CRUDAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDDiscount.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDDiscount.resx">
       <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDHistoryPrice.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDHistoryPrice.resx">
       <DependentUpon>GUI_CRUDHistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDProduct.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDProduct.resx">
       <DependentUpon>GUI_CRUDProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDProductType.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDProductType.resx">
       <DependentUpon>GUI_CRUDProductType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_CRUDSupplier.resx">
+    <EmbeddedResource Include="GUI\GUI_CRUDSupplier.resx">
       <DependentUpon>GUI_CRUDSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Discount.resx">
+    <EmbeddedResource Include="GUI\GUI_Discount.resx">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_HistoryPrice.resx">
+    <EmbeddedResource Include="GUI\GUI_HistoryPrice.resx">
       <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_HQTicketInfo.resx">
+    <EmbeddedResource Include="GUI\GUI_HQTicketInfo.resx">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Login.resx">
+    <EmbeddedResource Include="GUI\GUI_Login.resx">
       <DependentUpon>GUI_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Product.resx">
+    <EmbeddedResource Include="GUI\GUI_Product.resx">
       <DependentUpon>GUI_Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_ProductType.resx">
+    <EmbeddedResource Include="GUI\GUI_ProductType.resx">
       <DependentUpon>GUI_ProductType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_HQTicket.resx">
+    <EmbeddedResource Include="GUI\GUI_HQTicket.resx">
       <DependentUpon>GUI_HQTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Supplier.resx">
+    <EmbeddedResource Include="GUI\GUI_Supplier.resx">
       <DependentUpon>GUI_Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
@@ -317,8 +324,19 @@
   <ItemGroup>
     <None Include="Resources\download_32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Content Include="bin\Debug\CMART5.exe" />
+    <Content Include="bin\Debug\CMART5.pdb" />
+    <Content Include="bin\Debug\CMART5.vshost.exe" />
+    <Content Include="bin\Release\CMART5.exe" />
+    <Content Include="bin\Release\CMART5.pdb" />
+    <Content Include="bin\Release\CMART5.vshost.exe" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\15337437_564939833714935_7054825940865227314_n.jpg" />
+    <Content Include="Images\15541592_309455492788768_2272475361586540796_n.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\MH160011.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -155,6 +155,7 @@
             this.btn_change_password.LargeGlyph = global::CMART5.Properties.Resources.Apps_preferences_desktop_user_password_icon;
             this.btn_change_password.LargeWidth = 70;
             this.btn_change_password.Name = "btn_change_password";
+            this.btn_change_password.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_change_password_ItemClick);
             // 
             // btn_logout
             // 

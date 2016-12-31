@@ -70,6 +70,7 @@ namespace CMART5
                 if (open.CheckFileExists)
                 {
                     crfilename = Path.GetFileName(open.FileName);
+                    File.Delete(apath + "\\Images\\" + crfilename);
                     File.Copy(open.FileName, apath + "\\Images\\" + crfilename);
                 }
                 if (isthem == true)

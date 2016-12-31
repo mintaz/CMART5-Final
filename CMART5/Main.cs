@@ -16,6 +16,7 @@ namespace CMART5
             InitializeComponent();
         }
         public int auth;
+        public string idacc;
 
         //kiem tra form ton tai
         private Form checkexist(Type ftype)
@@ -194,6 +195,22 @@ namespace CMART5
         private void btn_logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_change_password_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_ChangePass));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_ChangePass fchange = new GUI_ChangePass();
+                fchange.MdiParent = this;
+                fchange.id = idacc;
+                fchange.Show();
+            }
         }
     }
 }
