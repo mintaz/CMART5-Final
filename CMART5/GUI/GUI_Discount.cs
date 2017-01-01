@@ -35,7 +35,7 @@ namespace CMART5
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GUI_CRUDDiscount fzm = new GUI_CRUDDiscount();
-            //fzm.isthem = true;
+            fzm.isthem = true;
             fzm.ShowDialog();
             loadData();
         }
@@ -49,8 +49,8 @@ namespace CMART5
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GUI_CRUDDiscount frm = new GUI_CRUDDiscount();
-           // frm.isthem = false;
-            //frm.idTK = gvDiscount.GetRowCellValue(index, this.ID).ToString();
+            frm.isthem = false;
+            frm.idDC = gvDiscount.GetRowCellValue(index, this.IDKM).ToString();
             frm.ShowDialog();
             loadData();
 
@@ -59,29 +59,29 @@ namespace CMART5
         private void gvAccount_DoubleClick(object sender, EventArgs e)
         {
             GUI_CRUDDiscount fnm = new GUI_CRUDDiscount();
-            //fnm.isthem = false;
-            //fnm.idTK = gvDiscount.GetRowCellValue(index, this.ID).ToString();
+            fnm.isthem = false;
+            fnm.idDC = gvDiscount.GetRowCellValue(index, this.IDKM).ToString();
             fnm.ShowDialog();
             loadData();
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //try
-            //{
-            //    if (XtraMessageBox.Show("Bạn có chắc chắn xóa tài khoản này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        Cmart5DataContext dbx = new Cmart5DataContext();
-            //        var taikhoan = dbx.TAIKHOANs.Where(a => a.idTAIKHOAN == gvAccount.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
-            //        dbx.TAIKHOANs.DeleteOnSubmit(taikhoan);
-            //        dbx.SubmitChanges();
-            //        XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
-            //    }
-            //}
-            //catch (Exception er)
-            //{
-            //    XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
-            //}
+            try
+            {
+                if (XtraMessageBox.Show("Bạn có chắc chắn xóa khuyến mãi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Cmart5DataContext dbx = new Cmart5DataContext();
+                    var khuyenmai = dbx.KHUYENMAIs.Where(a => a.idKHUYENMAI == gvDiscount.GetRowCellValue(index, this.IDKM).ToString()).SingleOrDefault();
+                    dbx.KHUYENMAIs.DeleteOnSubmit(khuyenmai);
+                    dbx.SubmitChanges();
+                    XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
+                }
+            }
+            catch (Exception er)
+            {
+                XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
+            }
             loadData();
         }
 

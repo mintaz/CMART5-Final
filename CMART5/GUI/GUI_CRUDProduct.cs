@@ -47,7 +47,7 @@ namespace CMART5
                  busproduct.loadProduct(idSP, txtname,txtpath,cboproducttype,cbonhacc);
                  picturepath = txtpath.EditValue.ToString();
                  picturebox.ImageLocation =apath+"\\"+picturepath;
-                picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+                 picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
              }
              else
              {
@@ -78,10 +78,16 @@ namespace CMART5
                     using (Cmart5DataContext temz = new Cmart5DataContext())
                     {
                         string year = (DateTime.Now.Year % 100).ToString();
-                        List<SANPHAM> r = temz.SANPHAMs.ToList().Where(st => st.idSANPHAM.Substring(2, 2) == year).ToList();
-                        string max = r.Max(t => t.idSANPHAM);
-                        int idnumber = int.Parse(max.Substring(4, 4)) + 1;
-                        maxId = "MH" + year + idnumber.ToString().PadLeft(4, '0');
+                        try
+                        {
+                            List<SANPHAM> r = temz.SANPHAMs.ToList().Where(st => st.idSANPHAM.Substring(2, 2) == year).ToList();
+                            string max = r.Max(t => t.idSANPHAM);
+                            int idnumber = int.Parse(max.Substring(4, 4)) + 1;
+                            maxId = "MH" + year + idnumber.ToString().PadLeft(4, '0');
+                        }catch(NullReferenceException)
+                        {
+                            maxId = "MH" + year + "0001";
+                        }
                     }
                     txtpath.EditValue = ("\\Images\\" + maxId + ".jpg");
                 }

@@ -41,7 +41,7 @@ namespace CMART5.BUS
             try
             {
                 dbupdate = new Cmart5DataContext();
-                TAIKHOAN tkupdatepass = dbauth.TAIKHOANs.Where(st => st.idTAIKHOAN == id).Single();
+                TAIKHOAN tkupdatepass = dbupdate.TAIKHOANs.Where(st => st.idTAIKHOAN == id).Single();
                 tkupdatepass.MATKHAU = txtpass.EditValue.ToString();
                 dbupdate.SubmitChanges();
                 MessageBox.Show("Đổi mật khẩu thành công");
