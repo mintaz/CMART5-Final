@@ -30,4 +30,4 @@ C:\Users\Admin\Desktop\CMART5-Final-master\CMART5\obj\Debug\CMART5.exe
 C:\Users\Admin\Desktop\CMART5-Final-master\CMART5\obj\Debug\CMART5.pdb
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI.GUI_HistoryP.resources
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.Report.HQTicks.resources
-C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.Report.BRTick.resources

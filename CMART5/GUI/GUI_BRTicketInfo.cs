@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 
 namespace CMART5
 {
@@ -114,6 +116,13 @@ namespace CMART5
             cbostatus.SelectedValue = gvBRticketInfo.GetRowCellValue(index, this.STATUS).ToString();
             numb.Value = (int)gvBRticketInfo.GetRowCellValue(index, this.AMOUNT);
 
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Report.BRTick report = new Report.BRTick();
+            report.DataSource = dbl.CTPHIEUNHAPHANGCHINHANHs.ToList();
+            report.ShowPreviewDialog();
         }
     }
 }

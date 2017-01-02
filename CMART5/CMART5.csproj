@@ -209,12 +209,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\BRTick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\BRTick.Designer.cs">
+      <DependentUpon>BRTick.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\HQTicks.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\HQTicks.Designer.cs">
       <DependentUpon>HQTicks.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\BRTick.resx">
+      <DependentUpon>BRTick.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\HQTicks.resx">
       <DependentUpon>HQTicks.cs</DependentUpon>
     </EmbeddedResource>
