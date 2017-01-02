@@ -51,7 +51,8 @@ namespace CMART5
         private void btn_AddTick_Click(object sender, EventArgs e)
         {
             string idRequest = cborequest.SelectedValue.ToString();
-            bushq.AddHQTicket(idRequest, idaccount);    
+            bushq.AddHQTicket(idRequest, idaccount);
+            loadData();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

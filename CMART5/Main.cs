@@ -35,16 +35,12 @@ namespace CMART5
         {
             if (auth == 1)
             {
-                //pagecatalog.Visible = true;
-                //pageimport.Visible = false;
-                //pagereceipt.Visible = false;
-                //pagerevenue.Visible = true;
-                //pagesystem.Visible = true;
                 pagecatalog.Visible = true;
-                pageimport.Visible = true;
-                pagereceipt.Visible = true;
+                pageimport.Visible = false;
+                pagereceipt.Visible = false;
                 pagerevenue.Visible = true;
                 pagesystem.Visible = true;
+                
             }else if(auth == 2)
             {
                 pagecatalog.Visible = false;
@@ -249,6 +245,23 @@ namespace CMART5
                 fhbr.idaccount = idacc;
                 fhbr.MdiParent = this;
                 fhbr.Show();
+            }
+
+        }
+
+        private void btn_receipt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI.GUI_POS));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI.GUI_POS fpos = new GUI.GUI_POS();
+                fpos.idaccount = idacc;
+                fpos.MdiParent = this;
+                fpos.Show();
             }
 
         }

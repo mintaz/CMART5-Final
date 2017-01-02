@@ -230,6 +230,7 @@
             this.btn_receipt.LargeGlyph = global::CMART5.Properties.Resources.folder_invoices_icon;
             this.btn_receipt.LargeWidth = 70;
             this.btn_receipt.Name = "btn_receipt";
+            this.btn_receipt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_receipt_ItemClick);
             // 
             // btn_revenue
             // 

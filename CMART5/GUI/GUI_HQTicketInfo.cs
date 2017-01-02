@@ -31,6 +31,7 @@ namespace CMART5
             cbostatus.DisplayMember = "Text";
             cbostatus.ValueMember = "Value";
             cbostatus.DataSource = status;
+            txtprice.Text = "0.0";
         }
         public string IDtick;
 

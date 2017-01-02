@@ -118,9 +118,8 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "Thêm";
-            this.btnAdd.Glyph = global::CMART5.Properties.Resources.Actions_list_add_user_icon;
+            this.btnAdd.Glyph = global::CMART5.Properties.Resources.addfile_32x32;
             this.btnAdd.Id = 0;
-            this.btnAdd.LargeGlyph = global::CMART5.Properties.Resources.Actions_list_add_user_icon;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdd_ItemClick);
             // 
