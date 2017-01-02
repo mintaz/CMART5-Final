@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using DevExpress.XtraExport;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 namespace CMART5
 {
     public partial class GUI_HQTicketInfo : Form
@@ -123,6 +125,13 @@ namespace CMART5
             txtprice.Text = gvHQticketInfo.GetRowCellValue(index, this.GIA).ToString();
             numb.Value = (int)gvHQticketInfo.GetRowCellValue(index, this.SOLUONG);
 
+        }
+
+        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Report.HQTicks report = new Report.HQTicks();
+            report.DataSource = dbl.CTPHIEUNHAPHANGTRUSOs.ToList();
+            report.ShowPreviewDialog();
         }
     }
 }
