@@ -221,6 +221,7 @@
             this.btn_BRimport.LargeGlyph = global::CMART5.Properties.Resources.import_icon1;
             this.btn_BRimport.LargeWidth = 70;
             this.btn_BRimport.Name = "btn_BRimport";
+            this.btn_BRimport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BRimport_ItemClick);
             // 
             // btn_receipt
             // 

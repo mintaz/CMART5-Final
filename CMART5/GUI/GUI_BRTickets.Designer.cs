@@ -1,6 +1,6 @@
 ﻿namespace CMART5
 {
-    partial class GUI_HQTicket
+    partial class GUI_BRTickets
     {
         /// <summary>
         /// Required designer variable.
@@ -35,37 +35,40 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbBR = new System.Windows.Forms.ComboBox();
             this.cborequest = new System.Windows.Forms.ComboBox();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btn_AddTick = new DevExpress.XtraEditors.SimpleButton();
-            this.gcHQticket = new DevExpress.XtraGrid.GridControl();
-            this.pHIEUNHAPHANGTRUSOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gvHQticket = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcBRticket = new DevExpress.XtraGrid.GridControl();
+            this.pHIEUNHAPHANGCHINHANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvBRticket = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.IDBR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.IDHQ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.IDRQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAYNHAP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.IDAC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cboBr = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pHIEUNHAPHANGTRUSOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcHQticket)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGTRUSOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHQticket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcBRticket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGCHINHANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBRticket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboBr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGTRUSOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -107,10 +110,11 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cbBR);
             this.layoutControl1.Controls.Add(this.cborequest);
             this.layoutControl1.Controls.Add(this.btnEdit);
             this.layoutControl1.Controls.Add(this.btn_AddTick);
-            this.layoutControl1.Controls.Add(this.gcHQticket);
+            this.layoutControl1.Controls.Add(this.gcBRticket);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -119,19 +123,27 @@
             this.layoutControl1.TabIndex = 9;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // cbBR
+            // 
+            this.cbBR.FormattingEnabled = true;
+            this.cbBR.Location = new System.Drawing.Point(424, 12);
+            this.cbBR.Name = "cbBR";
+            this.cbBR.Size = new System.Drawing.Size(85, 21);
+            this.cbBR.TabIndex = 17;
+            // 
             // cborequest
             // 
             this.cborequest.FormattingEnabled = true;
-            this.cborequest.Location = new System.Drawing.Point(97, 12);
+            this.cborequest.Location = new System.Drawing.Point(145, 12);
             this.cborequest.Name = "cborequest";
-            this.cborequest.Size = new System.Drawing.Size(218, 21);
+            this.cborequest.Size = new System.Drawing.Size(142, 21);
             this.cborequest.TabIndex = 16;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(455, 12);
+            this.btnEdit.Location = new System.Drawing.Point(585, 12);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(111, 22);
+            this.btnEdit.Size = new System.Drawing.Size(99, 22);
             this.btnEdit.StyleController = this.layoutControl1;
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "Sửa Phiếu";
@@ -139,96 +151,89 @@
             // 
             // btn_AddTick
             // 
-            this.btn_AddTick.Location = new System.Drawing.Point(319, 12);
+            this.btn_AddTick.Location = new System.Drawing.Point(513, 12);
             this.btn_AddTick.Name = "btn_AddTick";
-            this.btn_AddTick.Size = new System.Drawing.Size(132, 22);
+            this.btn_AddTick.Size = new System.Drawing.Size(68, 22);
             this.btn_AddTick.StyleController = this.layoutControl1;
             this.btn_AddTick.TabIndex = 6;
             this.btn_AddTick.Text = "Thêm Phiếu";
             this.btn_AddTick.Click += new System.EventHandler(this.btn_AddTick_Click);
             // 
-            // gcHQticket
+            // gcBRticket
             // 
-            this.gcHQticket.DataSource = this.pHIEUNHAPHANGTRUSOBindingSource;
-            this.gcHQticket.Location = new System.Drawing.Point(12, 38);
-            this.gcHQticket.MainView = this.gvHQticket;
-            this.gcHQticket.MenuManager = this.barManager1;
-            this.gcHQticket.Name = "gcHQticket";
-            this.gcHQticket.Size = new System.Drawing.Size(1101, 484);
-            this.gcHQticket.TabIndex = 5;
-            this.gcHQticket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvHQticket,
-            this.gridView1});
+            this.gcBRticket.DataSource = this.pHIEUNHAPHANGCHINHANHBindingSource;
+            this.gcBRticket.Location = new System.Drawing.Point(12, 38);
+            this.gcBRticket.MainView = this.gvBRticket;
+            this.gcBRticket.MenuManager = this.barManager1;
+            this.gcBRticket.Name = "gcBRticket";
+            this.gcBRticket.Size = new System.Drawing.Size(1101, 484);
+            this.gcBRticket.TabIndex = 5;
+            this.gcBRticket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvBRticket});
             // 
-            // pHIEUNHAPHANGTRUSOBindingSource
+            // pHIEUNHAPHANGCHINHANHBindingSource
             // 
-            this.pHIEUNHAPHANGTRUSOBindingSource.DataSource = typeof(CMART5.PHIEUNHAPHANGTRUSO);
+            this.pHIEUNHAPHANGCHINHANHBindingSource.DataSource = typeof(CMART5.PHIEUNHAPHANGCHINHANH);
             // 
-            // gvHQticket
+            // gvBRticket
             // 
-            this.gvHQticket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvBRticket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.IDBR,
             this.IDHQ,
-            this.IDRQ,
             this.NGAYNHAP,
-            this.SOLUONG,
-            this.IDAC});
-            this.gvHQticket.GridControl = this.gcHQticket;
-            this.gvHQticket.Name = "gvHQticket";
-            this.gvHQticket.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
-            this.gvHQticket.OptionsDetail.AllowZoomDetail = false;
-            this.gvHQticket.OptionsDetail.ShowDetailTabs = false;
-            this.gvHQticket.OptionsDetail.SmartDetailExpand = false;
-            this.gvHQticket.OptionsFind.AlwaysVisible = true;
-            this.gvHQticket.OptionsFind.FindDelay = 250;
-            this.gvHQticket.OptionsFind.ShowFindButton = false;
-            this.gvHQticket.OptionsView.ShowGroupPanel = false;
-            this.gvHQticket.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvHQticket_FocusedRowChanged);
-            this.gvHQticket.DoubleClick += new System.EventHandler(this.gvHQticket_DoubleClick);
+            this.TK,
+            this.BR});
+            this.gvBRticket.GridControl = this.gcBRticket;
+            this.gvBRticket.Name = "gvBRticket";
+            this.gvBRticket.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
+            this.gvBRticket.OptionsDetail.ShowDetailTabs = false;
+            this.gvBRticket.OptionsDetail.SmartDetailExpand = false;
+            this.gvBRticket.OptionsFind.AlwaysVisible = true;
+            this.gvBRticket.OptionsFind.FindDelay = 250;
+            this.gvBRticket.OptionsFind.ShowFindButton = false;
+            this.gvBRticket.OptionsView.ShowGroupPanel = false;
+            this.gvBRticket.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvBRticket_FocusedRowChanged);
+            this.gvBRticket.DoubleClick += new System.EventHandler(this.gvBRticket_DoubleClick);
+            // 
+            // IDBR
+            // 
+            this.IDBR.Caption = "ID phiếu Chi Nhánh";
+            this.IDBR.FieldName = "idPHIEUCHINHANH";
+            this.IDBR.Name = "IDBR";
+            this.IDBR.Visible = true;
+            this.IDBR.VisibleIndex = 0;
             // 
             // IDHQ
             // 
-            this.IDHQ.Caption = "ID phiếu Trụ Sở";
+            this.IDHQ.Caption = "ID Phiếu Trụ Sở";
             this.IDHQ.FieldName = "idPHIEUTRUSO";
             this.IDHQ.Name = "IDHQ";
-            this.IDHQ.OptionsColumn.AllowEdit = false;
             this.IDHQ.Visible = true;
-            this.IDHQ.VisibleIndex = 0;
-            // 
-            // IDRQ
-            // 
-            this.IDRQ.Caption = "ID phiếu Đề Xuất";
-            this.IDRQ.FieldName = "idPHIEUDEXUAT";
-            this.IDRQ.Name = "IDRQ";
-            this.IDRQ.OptionsColumn.AllowEdit = false;
-            this.IDRQ.Visible = true;
-            this.IDRQ.VisibleIndex = 1;
+            this.IDHQ.VisibleIndex = 1;
             // 
             // NGAYNHAP
             // 
             this.NGAYNHAP.Caption = "Ngày Nhập";
             this.NGAYNHAP.FieldName = "NGAYNHAP";
             this.NGAYNHAP.Name = "NGAYNHAP";
-            this.NGAYNHAP.OptionsColumn.AllowEdit = false;
             this.NGAYNHAP.Visible = true;
             this.NGAYNHAP.VisibleIndex = 2;
             // 
-            // SOLUONG
+            // TK
             // 
-            this.SOLUONG.Caption = "Số Lượng";
-            this.SOLUONG.FieldName = "SOLUONG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.OptionsColumn.AllowEdit = false;
-            this.SOLUONG.Visible = true;
-            this.SOLUONG.VisibleIndex = 3;
+            this.TK.Caption = "Tài Khoản";
+            this.TK.FieldName = "idTAIKHOAN";
+            this.TK.Name = "TK";
+            this.TK.Visible = true;
+            this.TK.VisibleIndex = 4;
             // 
-            // IDAC
+            // BR
             // 
-            this.IDAC.Caption = "ID Tài Khoản";
-            this.IDAC.FieldName = "idTAIKHOAN";
-            this.IDAC.Name = "IDAC";
-            this.IDAC.OptionsColumn.AllowEdit = false;
-            this.IDAC.Visible = true;
-            this.IDAC.VisibleIndex = 4;
+            this.BR.Caption = "Chi Nhánh";
+            this.BR.FieldName = "idCHINHANH";
+            this.BR.Name = "BR";
+            this.BR.Visible = true;
+            this.BR.VisibleIndex = 3;
             // 
             // layoutControlGroup1
             // 
@@ -239,7 +244,8 @@
             this.emptySpaceItem1,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.cboBr});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1125, 534);
@@ -247,7 +253,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.gcHQticket;
+            this.layoutControlItem2.Control = this.gcBRticket;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(1105, 488);
@@ -257,26 +263,26 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(558, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(676, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(547, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(429, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btn_AddTick;
-            this.layoutControlItem3.Location = new System.Drawing.Point(307, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(501, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(136, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(72, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(443, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(573, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(115, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(103, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -285,16 +291,24 @@
             this.layoutControlItem5.Control = this.cborequest;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(307, 26);
-            this.layoutControlItem5.Text = "ID Phiếu Đề Xuất";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(82, 13);
+            this.layoutControlItem5.Size = new System.Drawing.Size(279, 26);
+            this.layoutControlItem5.Text = "ID Phiếu Nhập Hàng Trụ Sở";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // gridView1
+            // cboBr
             // 
-            this.gridView1.GridControl = this.gcHQticket;
-            this.gridView1.Name = "gridView1";
+            this.cboBr.Control = this.cbBR;
+            this.cboBr.Location = new System.Drawing.Point(279, 0);
+            this.cboBr.Name = "cboBr";
+            this.cboBr.Size = new System.Drawing.Size(222, 26);
+            this.cboBr.Text = "Chi Nhánh";
+            this.cboBr.TextSize = new System.Drawing.Size(130, 13);
             // 
-            // GUI_HQTicket
+            // pHIEUNHAPHANGTRUSOBindingSource
+            // 
+            this.pHIEUNHAPHANGTRUSOBindingSource.DataSource = typeof(CMART5.PHIEUNHAPHANGTRUSO);
+            // 
+            // GUI_BRTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -304,22 +318,23 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "GUI_HQTicket";
-            this.Text = "GUI_HQTicket";
+            this.Name = "GUI_BRTickets";
+            this.Text = "GUI_BRTickets";
             this.Load += new System.EventHandler(this.GUI_HQTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcHQticket)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGTRUSOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvHQticket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcBRticket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGCHINHANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBRticket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboBr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHIEUNHAPHANGTRUSOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,22 +349,24 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.SimpleButton btn_AddTick;
-        private DevExpress.XtraGrid.GridControl gcHQticket;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvHQticket;
+        private DevExpress.XtraGrid.GridControl gcBRticket;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvBRticket;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraGrid.Columns.GridColumn IDBR;
         private DevExpress.XtraGrid.Columns.GridColumn IDHQ;
-        private DevExpress.XtraGrid.Columns.GridColumn IDRQ;
         private DevExpress.XtraGrid.Columns.GridColumn NGAYNHAP;
-        private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn IDAC;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource pHIEUNHAPHANGTRUSOBindingSource;
         private System.Windows.Forms.ComboBox cborequest;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource pHIEUNHAPHANGCHINHANHBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn TK;
+        private DevExpress.XtraGrid.Columns.GridColumn BR;
+        private System.Windows.Forms.ComboBox cbBR;
+        private DevExpress.XtraLayout.LayoutControlItem cboBr;
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="BUS\BUS_Account.cs" />
     <Compile Include="BUS\BUS_ChangePass.cs" />
     <Compile Include="BUS\BUS_Discount.cs" />
+    <Compile Include="BUS\BUS_HistoryPrice.cs" />
     <Compile Include="BUS\BUS_Login.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
     <Compile Include="BUS\BUS_ProductType.cs" />
@@ -80,6 +81,18 @@
     </Compile>
     <Compile Include="GUI\GUI_Account.Designer.cs">
       <DependentUpon>GUI_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BRTicketInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BRTicketInfo.Designer.cs">
+      <DependentUpon>GUI_BRTicketInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_BRTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_BRTickets.Designer.cs">
+      <DependentUpon>GUI_BRTickets.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_ChangePass.cs">
       <SubType>Form</SubType>
@@ -98,12 +111,6 @@
     </Compile>
     <Compile Include="GUI\GUI_CRUDDiscount.Designer.cs">
       <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUI_CRUDHistoryPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUI_CRUDHistoryPrice.Designer.cs">
-      <DependentUpon>GUI_CRUDHistoryPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_CRUDProduct.cs">
       <SubType>Form</SubType>
@@ -134,12 +141,6 @@
     </Compile>
     <Compile Include="GUI\GUI_Discount.Designer.cs">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\GUI_HistoryPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\GUI_HistoryPrice.Designer.cs">
-      <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_HQTicketInfo.cs">
       <SubType>Form</SubType>
@@ -191,7 +192,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bin\Debug\CMART5.exe.config" />
     <None Include="bin\Debug\CMART5.vshost.exe.config" />
     <None Include="bin\Debug\CMART5.vshost.exe.manifest" />
@@ -204,6 +207,12 @@
     <EmbeddedResource Include="GUI\GUI_Account.resx">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BRTicketInfo.resx">
+      <DependentUpon>GUI_BRTicketInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_BRTickets.resx">
+      <DependentUpon>GUI_BRTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_ChangePass.resx">
       <DependentUpon>GUI_ChangePass.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_CRUDDiscount.resx">
       <DependentUpon>GUI_CRUDDiscount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_CRUDHistoryPrice.resx">
-      <DependentUpon>GUI_CRUDHistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_CRUDProduct.resx">
       <DependentUpon>GUI_CRUDProduct.cs</DependentUpon>
@@ -230,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Discount.resx">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_HistoryPrice.resx">
-      <DependentUpon>GUI_HistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_HQTicketInfo.resx">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>
@@ -274,6 +277,7 @@
       <LastGenOutput>Cmart5.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\PHIEUNHAPHANGCHINHANH.datasource" />
     <None Include="Properties\DataSources\PHIEUNHAPHANGTRUSO.datasource" />
     <None Include="Properties\DataSources\SANPHAM.datasource" />
     <None Include="Properties\Settings.settings">
@@ -356,6 +360,13 @@
     <Content Include="Images\15541592_309455492788768_2272475361586540796_n.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\MH160011.jpg" />
+    <None Include="Resources\save_32x322.png" />
+    <None Include="Resources\addfile_32x321.png" />
+    <None Include="Resources\delete_32x32.png" />
+    <None Include="Resources\edit_32x32.png" />
+    <None Include="Resources\save_32x321.png" />
+    <None Include="Resources\saveandclose_32x32.png" />
+    <None Include="Resources\save_32x32.png" />
     <None Include="Resources\addfile_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -163,42 +163,42 @@
         <classShapeMoniker Id="93b4765d-fdcc-41d7-896a-5eee76a503a0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.51249430338542); (5.57291666666667 : 6.51249430338542 : JumpStart); (5.73958333333333 : 6.51249430338542 : JumpEnd); (9.25 : 6.51249430338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 6.51249430338542); (9.25 : 6.51249430338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_CTHOADON" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />
         <classShapeMoniker Id="6413efb7-4e58-4d91-a249-809e1c556fdf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.74092678695913); (5.59732443490112 : 7.83825122186025 : JumpStart); (5.71517556509888 : 7.95610235205801 : JumpEnd); (5.9049700229367 : 8.14589680989583); (10.25 : 8.14589680989583); (10.25 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 7.74092678695913); (5.9049700229367 : 8.14589680989583); (10.25 : 8.14589680989583); (10.25 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_CTPHIEUDEXUAT" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />
         <classShapeMoniker Id="3486b2e9-f722-4fb6-ad2f-ed8baac2f962" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 7.32979323567708); (9 : 7.32979323567708); (9 : 7.95359537760417); (11.75 : 7.95359537760417); (11.75 : 7.25); (15.75 : 7.25); (15.75 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 7.32979323567708); (5.57291666666667 : 7.32979323567708 : JumpStart); (5.73958333333333 : 7.32979323567708 : JumpEnd); (9 : 7.32979323567708); (9 : 7.95359537760417); (11.5416666666667 : 7.95359537760417 : JumpStart); (11.7083333333333 : 7.95359537760417 : JumpEnd); (11.75 : 7.95359537760417); (11.75 : 7.25); (15.75 : 7.25); (15.75 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_CTPHIEUNHAPHANGCHINHANH" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />
         <classShapeMoniker Id="1451aa0d-92e5-4ad2-9657-836d7f42c2b6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.468748 : 7.77089680989583); (4.468748 : 8.72624382512019); (5.57291666666667 : 8.72624382512019 : JumpStart); (5.73958333333333 : 8.72624382512019 : JumpEnd); (12 : 8.72624382512019)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.468748 : 7.77089680989583); (4.468748 : 8.72624382512019); (5.57291666666667 : 8.72624382512019 : JumpStart); (5.73958333333333 : 8.72624382512019 : JumpEnd); (5.79166666666667 : 8.72624382512019 : JumpStart); (5.95833333333333 : 8.72624382512019 : JumpEnd); (11.5416666666667 : 8.72624382512019 : JumpStart); (11.7083333333333 : 8.72624382512019 : JumpEnd); (11.7291666666667 : 8.72624382512019 : JumpStart); (11.8958333333333 : 8.72624382512019 : JumpEnd); (12 : 8.72624382512019)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_CTPHIEUNHAPHANGTRUSO" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />
         <classShapeMoniker Id="d8d561a6-d837-4ac2-bcd6-8e207e88c914" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.47139320537861 : 7.77089680989583); (5.59732443490112 : 7.89682803941834 : JumpStart); (5.71517556509888 : 8.0146791696161 : JumpEnd); (5.875 : 8.17450360451723); (5.875 : 10.3277498372396); (6.25 : 10.3277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.47139320537861 : 7.77089680989583); (5.875 : 8.17450360451723); (5.875 : 10.3277498372396); (6.25 : 10.3277498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_KHUYENMAI" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />
         <classShapeMoniker Id="1d310002-2fe1-4bc2-800c-a5a25d272582" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.92114376953125); (5.57291666666667 : 6.92114376953125 : JumpStart); (5.73958333333333 : 6.92114376953125 : JumpEnd); (7.25 : 6.92114376953125); (7.25 : 6.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 6.92114376953125); (7.25 : 6.92114376953125); (7.25 : 6.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Cmart5DataContext/SANPHAM/SANPHAM_LICHSUGIA" />
       <nodes>
         <classShapeMoniker Id="638ee98b-b727-4934-bb07-a11e6eb4c734" />

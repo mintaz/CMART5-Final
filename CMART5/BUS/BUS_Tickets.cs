@@ -44,7 +44,7 @@ namespace CMART5.BUS
                 MessageBox.Show("Lỗi:\n" + e.Message + "\n vui lòng kiểm tra lại");
             }
         }
-        public void AddHQTicketInfo(string idHQTicket, string idProduct, int quantity, string status, int price, DateTime expdate)
+        public void AddHQTicketInfo(string idHQTicket, string idProduct, int quantity, string status, double price, DateTime expdate)
         {
             try
             {
@@ -59,9 +59,11 @@ namespace CMART5.BUS
                 HQTI.TINHTRANG = status;
                 dbinfo.CTPHIEUNHAPHANGTRUSOs.InsertOnSubmit(HQTI);
                 dbinfo.SubmitChanges();
+                MessageBox.Show("Thêm thành công");
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show("Lỗi:\n" + e.Message + "\n vui lòng kiểm tra lại");
             }
         }
         public void UpdateHQTicketInfo(string idTicket, string idProduct, int quantity, string status, int price, DateTime expiredate)
@@ -79,6 +81,7 @@ namespace CMART5.BUS
                 s.HANSD = expiredate;
                 s.TINHTRANG = status;
                 dbu.SubmitChanges();
+                MessageBox.Show("cập nhập thành công");
                
             }
             catch (Exception)
@@ -112,11 +115,12 @@ namespace CMART5.BUS
                 BRT.idTAIKHOAN = idAccount;
                 dbBR.PHIEUNHAPHANGCHINHANHs.InsertOnSubmit(BRT);
                 dbBR.SubmitChanges();
+                MessageBox.Show("Thêm thành công");
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                MessageBox.Show("Lỗi:\n" + e.Message + "\n vui lòng kiểm tra lại");
             }
         }
         //Branch Import Ticket Info
@@ -133,8 +137,9 @@ namespace CMART5.BUS
                 BRTI.CTPHIEUNHAPHANGCHINHANHs.InsertOnSubmit(BRI);
                 BRTI.SubmitChanges();
             }
-            catch (Exception)
+            catch (Exception er)
             {
+                MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message + "\n có thể do kết nối server, vui lòng kiểm tra lại.");
             }
         }
         public void UpdateBRTicketInfo(string idTicket, string idProduct, int quantity, string status)
@@ -147,8 +152,9 @@ namespace CMART5.BUS
                 s.TINHTRANG = status;
                 bru.SubmitChanges();
             }
-            catch (Exception)
+            catch (Exception er)
             {
+                MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message + "\n có thể do kết nối server, vui lòng kiểm tra lại.");
             }
         }
         public void AddRQTicket(ComboBox cbncc, string idAccount)

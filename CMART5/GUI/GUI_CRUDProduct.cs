@@ -95,28 +95,37 @@ namespace CMART5
                 {
                     txtpath.EditValue = ("\\Images\\" + idSP + ".jpg");
                 }
+                picturebox.ImageLocation = (apath + "\\Images\\" + crfilename);
+                picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            picturebox.ImageLocation = (apath + "\\Images\\" + crfilename);
-            picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+            else
+            {
+                txtpath.EditValue = "";
+            }
+            
             
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            idproducttype = cboproducttype.SelectedValue.ToString();
-            idsupplier = cbonhacc.SelectedValue.ToString();
-            if (isthem == true)
+            if (txtpath.EditValue.ToString() != "")
             {
-                File.Delete(apath + "\\Images\\" + maxId + ".jpg");
-                File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + maxId + ".jpg");
-            }else
-            {
-                File.Delete(apath + "\\Images\\" + idSP + ".jpg");
-                File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + idSP + ".jpg");
+                idproducttype = cboproducttype.SelectedValue.ToString();
+                idsupplier = cbonhacc.SelectedValue.ToString();
+                if (isthem == true)
+                {
+
+                    File.Delete(apath + "\\Images\\" + maxId + ".jpg");
+                    File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + maxId + ".jpg");
+
+                }
+                else
+                {
+                    File.Delete(apath + "\\Images\\" + idSP + ".jpg");
+                    File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + idSP + ".jpg");
+                }
             }
-            busproduct.AddEditProduct(isthem, idSP, txtname, txtpath, cboproducttype, cbonhacc);
+                busproduct.AddEditProduct(isthem, idSP, txtname, txtpath, cboproducttype, cbonhacc); 
         }
-
-
     }
 }

@@ -35,9 +35,14 @@ namespace CMART5
         {
             if (auth == 1)
             {
+                //pagecatalog.Visible = true;
+                //pageimport.Visible = false;
+                //pagereceipt.Visible = false;
+                //pagerevenue.Visible = true;
+                //pagesystem.Visible = true;
                 pagecatalog.Visible = true;
-                pageimport.Visible = false;
-                pagereceipt.Visible = false;
+                pageimport.Visible = true;
+                pagereceipt.Visible = true;
                 pagerevenue.Visible = true;
                 pagesystem.Visible = true;
             }else if(auth == 2)
@@ -148,17 +153,17 @@ namespace CMART5
 
         private void btn_historyprice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.checkexist(typeof(GUI_HistoryPrice));
-            if (frm != null)
-            {
-                frm.Activate();
-            }
-            else
-            {
-                GUI_HistoryPrice fhm = new GUI_HistoryPrice();
-                fhm.MdiParent = this;
-                fhm.Show();
-            }
+            //Form frm = this.checkexist(typeof(GUI_HistoryPrice));
+            //if (frm != null)
+            //{
+            //    frm.Activate();
+            //}
+            //else
+            //{
+            //    GUI_HistoryPrice fhm = new GUI_HistoryPrice();
+            //    fhm.MdiParent = this;
+            //    fhm.Show();
+            //}
 
         }
 
@@ -187,6 +192,7 @@ namespace CMART5
             else
             {
                 GUI_HQTicket fhqt = new GUI_HQTicket();
+                fhqt.idaccount = idacc;
                 fhqt.MdiParent = this;
                 fhqt.Show();
             }
@@ -226,6 +232,23 @@ namespace CMART5
                 frequest.MdiParent = this;
                 frequest.idacc = idacc;
                 frequest.Show();
+            }
+
+        }
+
+        private void btn_BRimport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI_BRTickets));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI_BRTickets fhbr = new GUI_BRTickets();
+                fhbr.idaccount = idacc;
+                fhbr.MdiParent = this;
+                fhbr.Show();
             }
 
         }

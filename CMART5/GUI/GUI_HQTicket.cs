@@ -17,7 +17,7 @@ namespace CMART5
             InitializeComponent();
         }
         int index;
-        public string idacc;
+        public string idaccount;
         BUS.BUS_Tickets bushq = new BUS.BUS_Tickets();
         private void loadData()
         {
@@ -51,7 +51,7 @@ namespace CMART5
         private void btn_AddTick_Click(object sender, EventArgs e)
         {
             string idRequest = cborequest.SelectedValue.ToString();
-            bushq.AddHQTicket(idRequest, idacc);    
+            bushq.AddHQTicket(idRequest, idaccount);    
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
