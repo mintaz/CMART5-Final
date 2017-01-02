@@ -153,17 +153,17 @@ namespace CMART5
 
         private void btn_historyprice_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //Form frm = this.checkexist(typeof(GUI_HistoryPrice));
-            //if (frm != null)
-            //{
-            //    frm.Activate();
-            //}
-            //else
-            //{
-            //    GUI_HistoryPrice fhm = new GUI_HistoryPrice();
-            //    fhm.MdiParent = this;
-            //    fhm.Show();
-            //}
+            Form frm = this.checkexist(typeof(GUI.GUI_HistoryP));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI.GUI_HistoryP fhp = new GUI.GUI_HistoryP();
+                fhp.MdiParent = this;
+                fhp.Show();
+            }
 
         }
 

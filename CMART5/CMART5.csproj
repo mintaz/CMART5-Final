@@ -64,7 +64,7 @@
     <Compile Include="BUS\BUS_Account.cs" />
     <Compile Include="BUS\BUS_ChangePass.cs" />
     <Compile Include="BUS\BUS_Discount.cs" />
-    <Compile Include="BUS\BUS_HistoryPrice.cs" />
+    <Compile Include="BUS\BUS_History.cs" />
     <Compile Include="BUS\BUS_Login.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
     <Compile Include="BUS\BUS_ProductType.cs" />
@@ -141,6 +141,12 @@
     </Compile>
     <Compile Include="GUI\GUI_Discount.Designer.cs">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_HistoryP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_HistoryP.Designer.cs">
+      <DependentUpon>GUI_HistoryP.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_HQTicketInfo.cs">
       <SubType>Form</SubType>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Discount.resx">
       <DependentUpon>GUI_Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_HistoryP.resx">
+      <DependentUpon>GUI_HistoryP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_HQTicketInfo.resx">
       <DependentUpon>GUI_HQTicketInfo.cs</DependentUpon>

@@ -26,3 +26,7 @@ C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.pdb
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\bin\Debug\CMART5.exe
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\bin\Debug\CMART5.pdb
+C:\Users\Admin\Desktop\CMART5-Final-master\CMART5\bin\Debug\CMART5.exe.config
+C:\Users\Admin\Desktop\CMART5-Final-master\CMART5\obj\Debug\CMART5.exe
+C:\Users\Admin\Desktop\CMART5-Final-master\CMART5\obj\Debug\CMART5.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI.GUI_HistoryP.resources
