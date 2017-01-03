@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMART5", "CMART5\CMART5.csproj", "{90579A83-3049-4B86-84CE-CCDCC1679DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMART5.Tests", "CMART5.Tests\CMART5.Tests.csproj", "{8C8C5E89-F92D-4A77-8F59-2199B54ADC47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{90579A83-3049-4B86-84CE-CCDCC1679DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90579A83-3049-4B86-84CE-CCDCC1679DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90579A83-3049-4B86-84CE-CCDCC1679DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8C5E89-F92D-4A77-8F59-2199B54ADC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8C5E89-F92D-4A77-8F59-2199B54ADC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8C5E89-F92D-4A77-8F59-2199B54ADC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8C5E89-F92D-4A77-8F59-2199B54ADC47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

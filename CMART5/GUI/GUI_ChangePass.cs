@@ -45,7 +45,8 @@ namespace CMART5
             {
                 if (vl.Compare(txtnewpass, txtcofpass) == true)
                 {
-                    buscp.UpdatePass(id, txtnewpass);
+                    string pass = txtnewpass.EditValue.ToString();
+                    buscp.UpdatePass(id, pass);
                 }
                 else
                 {

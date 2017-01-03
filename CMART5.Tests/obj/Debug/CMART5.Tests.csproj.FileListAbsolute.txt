@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\bin\Debug\CMART5.Tests.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\bin\Debug\CMART5.Tests.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\bin\Debug\CMART5.exe
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\bin\Debug\CMART5.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\obj\Debug\CMART5.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\obj\Debug\CMART5.Tests.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\obj\Debug\CMART5.Tests.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5.Tests\bin\Debug\CMART5.Tests.dll.config

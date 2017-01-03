@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CMART5.BUS
 {
-    class BUS_Product
+    public class BUS_Product
     {
         Cmart5DataContext dbt, dbl;
 

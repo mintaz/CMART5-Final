@@ -8,17 +8,17 @@ using DevExpress.XtraEditors;
 
 namespace CMART5.BUS
 {
-    class BUS_Login
+    public class BUS_Login
     {
         BUS.BUS_Validation valid = new BUS_Validation();
         Cmart5DataContext dbvalid, dbid;
-        public int Authorize(DevExpress.XtraEditors.TextEdit user, DevExpress.XtraEditors.TextEdit pass)
+        public int Authorize(string user, string pass)
         {
             dbvalid = new Cmart5DataContext(); 
             try
             {
-                TAIKHOAN account = dbvalid.TAIKHOANs.Single(st => st.TENDANGNHAP == user.Text.ToString());
-                if (pass.Text.ToString() == account.MATKHAU)
+                TAIKHOAN account = dbvalid.TAIKHOANs.Single(st => st.TENDANGNHAP == user);
+                if (pass == account.MATKHAU)
                 {
                     return account.QUYEN;
                 }
@@ -29,19 +29,27 @@ namespace CMART5.BUS
                 return 0;
             }
         }
-        public string getID(DevExpress.XtraEditors.TextEdit user, DevExpress.XtraEditors.TextEdit pass)
+        public string getID(string user, string pass)
         {
-            dbid = new Cmart5DataContext();
-            TAIKHOAN account = dbvalid.TAIKHOANs.Single(st => st.TENDANGNHAP == user.Text.ToString());
-            if (pass.Text.ToString() == account.MATKHAU)
+            try
             {
-                return account.idTAIKHOAN;
+                dbid = new Cmart5DataContext();
+                TAIKHOAN id = dbid.TAIKHOANs.Single(st => st.TENDANGNHAP == user);
+                if (pass == id.MATKHAU)
+                {
+                    return id.idTAIKHOAN;
+                }
+                else
+                    return "";
             }
-            else return null;
+            catch(Exception)
+            {
+                return "";
+            }
 
 
         }
-        public bool validate(DevExpress.XtraEditors.TextEdit username, DevExpress.XtraEditors.TextEdit password)
+        public bool validate(string username, string password)
         {
             if (!valid.Required(username) && !valid.Required(password))
             {

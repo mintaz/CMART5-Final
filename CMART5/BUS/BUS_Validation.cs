@@ -22,6 +22,15 @@ namespace CMART5.BUS
                 return false;
             }
         }
+        public bool Required(string t)
+        {
+            string tmp = t;
+            if (string.IsNullOrEmpty(tmp) || string.IsNullOrWhiteSpace(tmp))
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Required(DevExpress.XtraEditors.TextEdit t)
         {
             string tmp = t.Text.ToString();

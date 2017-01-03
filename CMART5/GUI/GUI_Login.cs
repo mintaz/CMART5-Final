@@ -28,10 +28,12 @@ namespace CMART5
         {
             try
             {
-                if (loginval.validate(txtusename,txtpass))
+                string name = txtusename.EditValue.ToString();
+                string pass = txtpass.EditValue.ToString();
+                if (loginval.validate(name, pass))
                 {
-                    int i = loginval.Authorize(txtusename, txtpass);
-                    string idac = loginval.getID(txtusename, txtpass);
+                    int i = loginval.Authorize(name, pass);
+                    string idac = loginval.getID(name, pass);
                     if (i == 0)
                     {
                         MessageBox.Show("Sai Tên đăng nhập hoặc mật khẩu");
