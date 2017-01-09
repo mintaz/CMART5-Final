@@ -17,6 +17,7 @@ namespace CMART5
             InitializeComponent();
         }
         int index;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         public string idaccount;
         BUS.BUS_Tickets busbr = new BUS.BUS_Tickets();   
         private void loadData()
@@ -30,8 +31,6 @@ namespace CMART5
                 {
                 new { Text ="1",Value ="1"},
                 new { Text ="2",Value ="2"},
-                new { Text ="3",Value ="3"},
-                new { Text ="4",Value ="4"},
                  };
             cbBR.DataSource = br;
             cbBR.DisplayMember = "Text";
@@ -63,8 +62,16 @@ namespace CMART5
         {
             string idRequest = cborequest.SelectedValue.ToString();
             int ibranch = int.Parse(cbBR.SelectedValue.ToString());
-            busbr.AddBRTicket (idRequest,ibranch,idaccount);
-            loadData();
+            if (valid.Required(cborequest)==false)
+            {
+                MessageBox.Show("Vui lòng chọn phiếu nhập hàng trụ sở");
+            }
+            else
+            {
+                busbr.AddBRTicket(idRequest, ibranch, idaccount);
+                loadData();
+            }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

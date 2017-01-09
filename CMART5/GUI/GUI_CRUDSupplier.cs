@@ -17,6 +17,7 @@ namespace CMART5
             InitializeComponent();
         }
         BUS.BUS_Supplier bussup = new BUS.BUS_Supplier();
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         public string idSup;
         public bool isthem;
 
@@ -37,8 +38,25 @@ namespace CMART5
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bussup.AddEditSupplier(isthem, idSup, txtname, txtaddress, txtphone);
-
+            if (valid.Required(txtname) == false)
+            {
+                MessageBox.Show("Vui lòng nhập tên nhà cung cấp");
+            }else if(valid.Required(txtphone)==false)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại nhà cung cấp");
+            }
+            else if(valid.Required(txtaddress)==false)
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ nhà cung cấp");
+            }
+            else
+            {
+                if (valid.IsNum(txtphone) == false)
+                {
+                    MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng kiểm tra lại số điện thoại");
+                }else
+                bussup.AddEditSupplier(isthem, idSup, txtname, txtaddress, txtphone);
+            }
         }
 
     }

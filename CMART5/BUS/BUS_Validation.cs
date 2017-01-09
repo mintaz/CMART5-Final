@@ -22,6 +22,18 @@ namespace CMART5.BUS
                 return false;
             }
         }
+        public bool IsNum(DevExpress.XtraEditors.TextEdit t)
+        {
+            try
+            {
+                float tmp = float.Parse(t.Text.ToString());
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
         public bool Required(string t)
         {
             string tmp = t;
@@ -40,6 +52,16 @@ namespace CMART5.BUS
             }
             return true;
         }
+        public bool Required(ComboBox c)
+        {
+            string tmp = c.SelectedValue.ToString();
+            if (string.IsNullOrEmpty(tmp) || string.IsNullOrWhiteSpace(tmp))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public bool Required(TextBox t)
         {
             string tmp = t.Text.ToString();

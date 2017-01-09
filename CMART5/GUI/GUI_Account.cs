@@ -18,6 +18,7 @@ namespace CMART5
             InitializeComponent();
         }
         Cmart5DataContext dbl;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         int index;
         private void loadData()
         {
@@ -50,9 +51,19 @@ namespace CMART5
         {
             GUI_CRUDAccount frm = new GUI_CRUDAccount();
             frm.isthem = false;
-            frm.idTK = gvAccount.GetRowCellValue(index,this.ID).ToString();
-            frm.ShowDialog();
-            loadData();
+            try
+            {
+                string tmpid = gvAccount.GetRowCellValue(index,this.ID).ToString();
+                frm.idTK = tmpid;
+                frm.ShowDialog();
+                loadData();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+            
             
         }
 
@@ -77,9 +88,9 @@ namespace CMART5
                     dbx.SubmitChanges();
                     XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
                 }
-            }catch(Exception er)
+            }catch(Exception)
             {
-                XtraMessageBox.Show("Lỗi:\n"+er.Message, "Thông báo");
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
             }
             loadData();
         }

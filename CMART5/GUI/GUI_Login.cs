@@ -28,10 +28,10 @@ namespace CMART5
         {
             try
             {
-                string name = txtusename.EditValue.ToString();
-                string pass = txtpass.EditValue.ToString();
-                if (loginval.validate(name, pass))
+                if (loginval.validate(txtusename,txtpass))
                 {
+                    string name = txtusename.EditValue.ToString();
+                    string pass = txtpass.EditValue.ToString();
                     int i = loginval.Authorize(name, pass);
                     string idac = loginval.getID(name, pass);
                     if (i == 0)

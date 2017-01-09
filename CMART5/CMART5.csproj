@@ -282,11 +282,23 @@
     <Compile Include="GUI\GUI_ReceiptInfo.Designer.cs">
       <DependentUpon>GUI_ReceiptInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_RequestInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_RequestInfo.Designer.cs">
+      <DependentUpon>GUI_RequestInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_RequestTicket.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GUI_RequestTicket.Designer.cs">
       <DependentUpon>GUI_RequestTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Stat.Designer.cs">
+      <DependentUpon>GUI_Stat.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_Supplier.cs">
       <SubType>Form</SubType>
@@ -314,6 +326,18 @@
     <Compile Include="Report\HQTicks.Designer.cs">
       <DependentUpon>HQTicks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\RQTick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RQTick.Designer.cs">
+      <DependentUpon>RQTick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Stat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stat.Designer.cs">
+      <DependentUpon>Stat.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\GUI_POS.resx">
       <DependentUpon>GUI_POS.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,11 +347,23 @@
     <EmbeddedResource Include="GUI\GUI_ReceiptInfo.resx">
       <DependentUpon>GUI_ReceiptInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_RequestInfo.resx">
+      <DependentUpon>GUI_RequestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Stat.resx">
+      <DependentUpon>GUI_Stat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\BRTick.resx">
       <DependentUpon>BRTick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\HQTicks.resx">
       <DependentUpon>HQTicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RQTick.resx">
+      <DependentUpon>RQTick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stat.resx">
+      <DependentUpon>Stat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

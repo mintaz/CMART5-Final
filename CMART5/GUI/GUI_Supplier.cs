@@ -18,6 +18,7 @@ namespace CMART5
             InitializeComponent();
         }
         Cmart5DataContext dbl;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         int index;
         private void loadData()
         {
@@ -50,9 +51,25 @@ namespace CMART5
         {
             GUI_CRUDSupplier frm = new GUI_CRUDSupplier();
             frm.isthem = false;
-            frm.idSup = gvSupplier.GetRowCellValue(index, this.ID).ToString();
-            frm.ShowDialog();
+            try
+            {
+                string tmpid = gvSupplier.GetRowCellValue(index, this.ID).ToString();
+                if (valid.Required(tmpid) == false)
+                {
+                    MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+                }
+                else
+                {
+                    frm.idSup = tmpid;
+                    frm.ShowDialog();
             loadData();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+            
 
         }
 
@@ -69,18 +86,26 @@ namespace CMART5
         {
             try
             {
-                if (XtraMessageBox.Show("Bạn có chắc chắn xóa  không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                string tmpid = gvSupplier.GetRowCellValue(index, this.ID).ToString();
+                if (valid.Required(tmpid) == false)
                 {
-                    Cmart5DataContext dbx = new Cmart5DataContext();
-                    var NHACUNGCAP = dbx.NHACUNGCAPs.Where(a => a.idNHACUNGCAP == gvSupplier.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
-                    dbx.NHACUNGCAPs.DeleteOnSubmit(NHACUNGCAP);
-                    dbx.SubmitChanges();
-                    XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
+                    MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+                }
+                else
+                {
+                    if (XtraMessageBox.Show("Bạn có chắc chắn xóa  không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Cmart5DataContext dbx = new Cmart5DataContext();
+                        var NHACUNGCAP = dbx.NHACUNGCAPs.Where(a => a.idNHACUNGCAP == tmpid).SingleOrDefault();
+                        dbx.NHACUNGCAPs.DeleteOnSubmit(NHACUNGCAP);
+                        dbx.SubmitChanges();
+                        XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
+                    }
                 }
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
+                XtraMessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại", "Thông báo");
             }
             loadData();
         }

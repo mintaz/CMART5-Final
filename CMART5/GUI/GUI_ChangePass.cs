@@ -45,8 +45,16 @@ namespace CMART5
             {
                 if (vl.Compare(txtnewpass, txtcofpass) == true)
                 {
-                    string pass = txtnewpass.EditValue.ToString();
-                    buscp.UpdatePass(id, pass);
+                    if (vl.Compare(txtoldpass, txtcofpass) == false)
+                    {
+                        MessageBox.Show("Mật khẩu mới không được trùng với mập khẩu cũ, vui lòng nhập lại");
+                    }
+                    else
+                    {
+                        string pass = txtnewpass.EditValue.ToString();
+                        buscp.UpdatePass(id, pass);
+                    }
+                    
                 }
                 else
                 {

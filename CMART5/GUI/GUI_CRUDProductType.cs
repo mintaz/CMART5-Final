@@ -17,6 +17,7 @@ namespace CMART5
             InitializeComponent();
         }
         BUS.BUS_ProductType bus = new BUS.BUS_ProductType();
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         public string idLSP;
         public bool isthem;
 
@@ -37,7 +38,15 @@ namespace CMART5
         }
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bus.AddEditProductType(isthem, idLSP, txtname);
+            if(valid.Required(txtname)==false)
+            {
+                MessageBox.Show("Vui lòng nhập tên loại sản phẩm");
+            }
+            else
+            {
+                bus.AddEditProductType(isthem, idLSP, txtname);
+            }
+            
 
         }
 

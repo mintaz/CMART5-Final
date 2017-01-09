@@ -26,9 +26,11 @@ namespace CMART5
         public string maxId;
         string apath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
         BUS.BUS_Product busproduct = new BUS.BUS_Product();
-
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         private void GUI_CRUDProduct_Load(object sender, EventArgs e)
         {
+            txtpath.Enabled = false;
+
              using(Cmart5DataContext temp = new Cmart5DataContext())
              {
                  cboproducttype.DataSource = temp.LOAISANPHAMs.ToList();
@@ -108,6 +110,14 @@ namespace CMART5
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (valid.Required(txtname) == false)
+            {
+                MessageBox.Show("Vui lòng nhập tên sản phẩm");
+            }
+            else
+            {
+
+
             if (txtpath.EditValue.ToString() != "")
             {
                 idproducttype = cboproducttype.SelectedValue.ToString();
@@ -125,7 +135,8 @@ namespace CMART5
                     File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + idSP + ".jpg");
                 }
             }
-                busproduct.AddEditProduct(isthem, idSP, txtname, txtpath, cboproducttype, cbonhacc); 
+                busproduct.AddEditProduct(isthem, idSP, txtname, txtpath, cboproducttype, cbonhacc);
+            }
         }
     }
 }

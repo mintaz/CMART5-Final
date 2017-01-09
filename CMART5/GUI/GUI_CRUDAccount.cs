@@ -17,6 +17,7 @@ namespace CMART5
         {
             InitializeComponent();
         }
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         BUS.BUS_Account bus = new BUS.BUS_Account();
         public string idTK;
         public bool isthem;
@@ -44,15 +45,53 @@ namespace CMART5
                 txtphone.EditValue = "";
                 txtcmnd.EditValue = "";
                 txtuser.EditValue = "";
-                txtpass.EditValue = "";
+                txtpass.EditValue = "cmart123";
             }
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
-                int authority = int.Parse(cboquyen.SelectedValue.ToString());
-                bus.AddEditAccount(isthem,idTK,txtname, txtaddress, txtphone, txtcmnd, txtuser, txtpass, authority);
+            if(valid.Required(txtname))
+            {
+                MessageBox.Show("Vui lòng nhập họ tên tài khoản");
+            }
+            else if(valid.Required(txtaddress))
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
+            }
+            else if(valid.Required(txtcmnd))
+            {
+                MessageBox.Show("Vui lòng nhập số chứng minh nhân dân");
+            }
+            else if (valid.Required(txtphone))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
+            }
+            else if (valid.Required(txtuser))
+            {
+                MessageBox.Show("Vui lòng nhập tên đăng nhập");
+            }
+            else if (valid.Required(txtpass))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu");
+            }
+            else
+            {
+                if (valid.IsNum(txtcmnd) == false)
+                {
+                    MessageBox.Show("Số chứng minh nhân dân sai định dạng, vui lòng nhập lại");
+                }else if(valid.IsNum(txtphone)==false)
+                {
+                    MessageBox.Show("Số điện thoại sai định dạng, vui lòng nhập lại");
+                }
+                else
+                {
+                    int authority = int.Parse(cboquyen.SelectedValue.ToString());
+                    bus.AddEditAccount(isthem, idTK, txtname, txtaddress, txtphone, txtcmnd, txtuser, txtpass, authority);
+                }
+            }
+                
         }
 
     }

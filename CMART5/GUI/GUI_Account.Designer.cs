@@ -172,6 +172,7 @@
             this.QUYEN});
             this.gvAccount.GridControl = this.gcAccount;
             this.gvAccount.Name = "gvAccount";
+            this.gvAccount.OptionsDetail.EnableMasterViewMode = false;
             this.gvAccount.OptionsFind.AlwaysVisible = true;
             this.gvAccount.OptionsView.ShowGroupPanel = false;
             this.gvAccount.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvAccount_FocusedRowChanged);

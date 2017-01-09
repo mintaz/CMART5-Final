@@ -17,6 +17,7 @@ namespace CMART5.GUI
             InitializeComponent();
         }
         Cmart5DataContext dbhis;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         public void loadData()
         {
             dbhis = new Cmart5DataContext();
@@ -39,13 +40,27 @@ namespace CMART5.GUI
         BUS.BUS_History bushistory;
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            isthem = true;
-            bushistory = new BUS.BUS_History();
-            string idpro = cboSP.SelectedValue.ToString();
-            int price = int.Parse(txtprice.Text);
-            DateTime dta = dthis.Value;
-            bushistory.AddHistory(isthem, idpro,price, dta);
-            loadData();
+            if (valid.Required(txtprice) == false)
+            {
+                MessageBox.Show("Vui lòng nhập giá sản phẩm");
+            }
+            else
+            {
+                if (valid.IsNum(txtprice) == false)
+                {
+                    MessageBox.Show("Giá sản phẩm không hợp lệ, vui lòng nhập lại.");
+                }
+                else
+                {
+                    isthem = true;
+                    bushistory = new BUS.BUS_History();
+                    string idpro = cboSP.SelectedValue.ToString();
+                    int price = int.Parse(txtprice.Text);
+                    DateTime dta = dthis.Value;
+                    bushistory.AddHistory(isthem, idpro, price, dta);
+                    loadData();
+                }
+            }
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

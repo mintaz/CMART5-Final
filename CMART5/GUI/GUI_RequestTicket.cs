@@ -18,6 +18,7 @@ namespace CMART5.GUI
         }
         Cmart5DataContext dbl;
         public string idacc;
+        int index;
         private void loadData()
         {
             dbl = new Cmart5DataContext();
@@ -36,6 +37,43 @@ namespace CMART5.GUI
             frmrequest.id = idacc;
             frmrequest.ShowDialog();
             loadData();
+        }
+
+        private void gvRequestTicket_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            index = e.FocusedRowHandle;
+        }
+
+        private void gcRequestTicket_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                GUI_RequestInfo frmRQinfo = new GUI_RequestInfo();
+                frmRQinfo.IDtick = gvRequestTicket.GetRowCellValue(index, this.ID).ToString();
+                frmRQinfo.ShowDialog();
+                loadData();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+        }
+
+        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                GUI_RequestInfo frmRQinfo = new GUI_RequestInfo();
+                frmRQinfo.IDtick = gvRequestTicket.GetRowCellValue(index, this.ID).ToString();
+                frmRQinfo.ShowDialog();
+                loadData();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+            
+            
         }
     }
 }

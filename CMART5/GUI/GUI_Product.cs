@@ -20,6 +20,7 @@ namespace CMART5
             InitializeComponent();
         }
         Cmart5DataContext dbl;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         int index;
         private void loadData()
         {
@@ -52,9 +53,27 @@ namespace CMART5
         {
             GUI_CRUDProduct frm = new GUI_CRUDProduct();
             frm.isthem = false;
-            frm.idSP = gvProduct.GetRowCellValue(index, this.ID).ToString();
-            frm.ShowDialog();
-            loadData();
+            try
+            {
+                string tmpid = gvProduct.GetRowCellValue(index, this.ID).ToString();
+                if (valid.Required(tmpid) == false)
+                {
+                    MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+                }
+                else
+                {
+                    frm.idSP = tmpid;
+                    frm.ShowDialog();
+                    loadData();
+                }
+                
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+           
 
         }
 
@@ -71,18 +90,19 @@ namespace CMART5
         {
             try
             {
+                string tmpid = gvProduct.GetRowCellValue(index, this.ID).ToString();
                 if (XtraMessageBox.Show("Bạn có chắc chắn xóa sản phẩm này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Cmart5DataContext dbx = new Cmart5DataContext();
-                    var sanpham = dbx.SANPHAMs.Where(a => a.idSANPHAM == gvProduct.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
+                    var sanpham = dbx.SANPHAMs.Where(a => a.idSANPHAM == tmpid ).SingleOrDefault();
                     dbx.SANPHAMs.DeleteOnSubmit(sanpham);
                     dbx.SubmitChanges();
                     XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
                 }
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
             }
             loadData();
         }

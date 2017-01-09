@@ -171,3 +171,7 @@ C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI_RequestInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.Report.RQTick.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.GUI.GUI_Stat.resources
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\CMART5\CMART5-Final\CMART5\obj\Debug\CMART5.Report.Stat.resources

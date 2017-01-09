@@ -49,7 +49,7 @@ namespace CMART5.BUS
 
 
         }
-        public bool validate(string username, string password)
+        public bool validate(DevExpress.XtraEditors.TextEdit username, DevExpress.XtraEditors.TextEdit password)
         {
             if (!valid.Required(username) && !valid.Required(password))
             {

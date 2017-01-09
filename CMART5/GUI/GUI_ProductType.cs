@@ -18,6 +18,7 @@ namespace CMART5
             InitializeComponent();
         }
         Cmart5DataContext dbl;
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         int index;
         private void loadData()
         {
@@ -50,9 +51,27 @@ namespace CMART5
         {
             GUI_CRUDProductType frm = new GUI_CRUDProductType();
             frm.isthem = false;
-            frm.idLSP = gvProductype.GetRowCellValue(index, this.ID).ToString();
-            frm.ShowDialog();
-            loadData();
+            try
+            {
+                string tmpid = gvProductype.GetRowCellValue(index, this.ID).ToString();
+
+                if (valid.Required(tmpid) == false)
+                {
+                    MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+                }
+                else
+                {
+                    frm.idLSP = tmpid;
+                    frm.ShowDialog();
+                    loadData();
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+            }
+            
 
         }
 
@@ -69,18 +88,23 @@ namespace CMART5
         {
             try
             {
+                string tmpid = gvProductype.GetRowCellValue(index, this.ID).ToString();
+                if (valid.Required(tmpid) == false)
+                {
+                    MessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại");
+                }
                 if (XtraMessageBox.Show("Bạn có chắc chắn xóa loại sản phẩm này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Cmart5DataContext dbx = new Cmart5DataContext();
-                    var loaispham = dbx.LOAISANPHAMs.Where(a => a.idLOAISANPHAM == gvProductype.GetRowCellValue(index, this.ID).ToString()).SingleOrDefault();
+                    var loaispham = dbx.LOAISANPHAMs.Where(a => a.idLOAISANPHAM == tmpid ).SingleOrDefault();
                     dbx.LOAISANPHAMs.DeleteOnSubmit(loaispham);
                     dbx.SubmitChanges();
                     XtraMessageBox.Show("Đã xóa thành công", "Thông Báo");
                 }
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                XtraMessageBox.Show("Lỗi:\n" + er.Message, "Thông báo");
+                XtraMessageBox.Show("Bạn chưa chọn đối tượng, hoặc danh sách trống. Vui lòng kiểm tra lại", "Thông báo");
             }
             loadData();
         }

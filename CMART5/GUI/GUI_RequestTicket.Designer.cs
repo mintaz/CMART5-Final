@@ -42,6 +42,7 @@
             this.DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NCC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcRequestTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvRequestTicket)).BeginInit();
@@ -57,9 +58,10 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btn_Add});
+            this.btn_Add,
+            this.btnEdit});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 1;
+            this.barManager1.MaxItemId = 2;
             // 
             // bar2
             // 
@@ -68,7 +70,8 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_Add, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.AllowQuickCustomization = false;
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
@@ -123,6 +126,7 @@
             this.gcRequestTicket.TabIndex = 4;
             this.gcRequestTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRequestTicket});
+            this.gcRequestTicket.DoubleClick += new System.EventHandler(this.gcRequestTicket_DoubleClick);
             // 
             // gvRequestTicket
             // 
@@ -138,6 +142,7 @@
             this.gvRequestTicket.OptionsFind.FindDelay = 250;
             this.gvRequestTicket.OptionsFind.ShowFindButton = false;
             this.gvRequestTicket.OptionsView.ShowGroupPanel = false;
+            this.gvRequestTicket.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvRequestTicket_FocusedRowChanged);
             // 
             // ID
             // 
@@ -170,6 +175,14 @@
             this.TK.Name = "TK";
             this.TK.Visible = true;
             this.TK.VisibleIndex = 3;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Caption = "Sửa Thông tin Phiếu";
+            this.btnEdit.Glyph = global::CMART5.Properties.Resources.edit_32x32;
+            this.btnEdit.Id = 1;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // GUI_RequestTicket
             // 
@@ -207,5 +220,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn DATE;
         private DevExpress.XtraGrid.Columns.GridColumn NCC;
         private DevExpress.XtraGrid.Columns.GridColumn TK;
+        private DevExpress.XtraBars.BarButtonItem btnEdit;
     }
 }

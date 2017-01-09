@@ -58,21 +58,27 @@ namespace CMART5
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bool check = true;
             string idpro = lookUpEdit1.EditValue.ToString();
             int qt = int.Parse(numb.Value.ToString());
             string st = cbostatus.SelectedValue.ToString();
-            if (idpro == null || qt == 0 || st == null)
+             if (idpro == null )
             {
-                MessageBox.Show("Err");
-                check = false;
-            };
-            if (check == true)
-            {
-                BUS.BUS_Tickets buz = new BUS.BUS_Tickets();
-                buz.AddTBRicketInfo(this.IDtick, idpro, qt, st);
-                loadData();
+                MessageBox.Show("Vui lòng chọn sản phẩm");
             }
+             else if (qt == 0)
+             {
+                 MessageBox.Show("Vui lòng chọn số lượng sản phẩm");
+             }
+             else if (st == null)
+             {
+                 MessageBox.Show("Vui lòng chọn tình trạng sản phẩm");
+             }
+             else
+             {
+                 BUS.BUS_Tickets buz = new BUS.BUS_Tickets();
+                 buz.AddTBRicketInfo(this.IDtick, idpro, qt, st);
+                 loadData();
+             }
 
         }
 
@@ -97,12 +103,27 @@ namespace CMART5
             string idp = lookUpEdit1.EditValue.ToString();
             int qa = int.Parse(numb.Value.ToString());
             string st = cbostatus.SelectedValue.ToString();
-            BUS.BUS_Tickets buzu = new BUS.BUS_Tickets();
-            buzu.UpdateBRTicketInfo(IDtick, idp, qa, st);
-            loadData();
-            btnAdd.Enabled = true;
-            lookUpEdit1.Enabled = true;
-            btnSave.Enabled = false;
+             if (idp == null )
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm");
+            }
+             else if (qa == 0)
+             {
+                 MessageBox.Show("Vui lòng chọn số lượng sản phẩm");
+             }
+             else if (st == null)
+             {
+                 MessageBox.Show("Vui lòng chọn tình trạng sản phẩm");
+             }
+             else
+             {
+                 BUS.BUS_Tickets buzu = new BUS.BUS_Tickets();
+                 buzu.UpdateBRTicketInfo(IDtick, idp, qa, st);
+                 loadData();
+                 btnAdd.Enabled = true;
+                 lookUpEdit1.Enabled = true;
+                 btnSave.Enabled = false;
+             }
         }
 
         private void btn_Edit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

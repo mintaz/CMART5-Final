@@ -48,13 +48,13 @@ namespace CMART5.BUS
             {
                 dbt.NHACUNGCAPs.InsertOnSubmit(sup);
                 dbt.SubmitChanges();
-                MessageBox.Show("Thêm loại sản phẩm thành công");
+                MessageBox.Show("Thêm nhà cung cấp thành công");
 
             }
             else
             {
                 dbt.SubmitChanges();
-                MessageBox.Show("Sửa loại sản phẩm thành công");
+                MessageBox.Show("Sửa thông tin nhà cung cấp thành công");
             }
 
 
@@ -68,5 +68,6 @@ namespace CMART5.BUS
             txtphone.EditValue = ncc.SDT;
 
         }
+
     }
 }

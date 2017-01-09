@@ -188,6 +188,37 @@ namespace CMART5.BUS
                 MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message+"\n có thể do kết nối server, vui lòng kiểm tra lại.");
             }
         }
+        public void AddRQicketInfo(string idTicket, string idProduct, int quantity)
+        {
+            try
+            {
+                Cmart5DataContext RQI = new Cmart5DataContext();
+                CTPHIEUDEXUAT RQInfo = new CTPHIEUDEXUAT();
+                RQInfo.idPHIEUDEXUAT = idTicket;
+                RQInfo.idSANPHAM = idProduct;
+                RQInfo.SOLUONG = quantity;
+                RQI.CTPHIEUDEXUATs.InsertOnSubmit(RQInfo);
+                RQI.SubmitChanges();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message + "\n có thể do kết nối server, vui lòng kiểm tra lại.");
+            }
+        }
+        public void UpdateRQTicketInfo(string idTicket, string idProduct, int quantity)
+        {
+            try
+            {
+                Cmart5DataContext RQU = new Cmart5DataContext();
+                CTPHIEUDEXUAT s = RQU.CTPHIEUDEXUATs.Single(st => st.idPHIEUDEXUAT == idTicket && st.idSANPHAM == idProduct);
+                s.SOLUONG = quantity;
+                RQU.SubmitChanges();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Đã xuất hiện lỗi:\n" + er.Message + "\n có thể do kết nối server, vui lòng kiểm tra lại.");
+            }
+        }
 
 
     }

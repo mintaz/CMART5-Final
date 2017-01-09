@@ -17,6 +17,7 @@ namespace CMART5
         {
             InitializeComponent();
         }
+        BUS.BUS_Validation valid = new BUS.BUS_Validation();
         public bool isthem;
         public string idDC;
         string crfilename;
@@ -26,6 +27,7 @@ namespace CMART5
         BUS.BUS_Discount busdiscount = new BUS.BUS_Discount();
         private void GUI_CRUDDiscount_Load(object sender, EventArgs e)
         {
+            txtpath.Enabled = false;
             using (Cmart5DataContext temp = new Cmart5DataContext())
             {
                 var item = temp.SANPHAMs.ToList();
@@ -89,25 +91,52 @@ namespace CMART5
                 {
                     txtpath.EditValue = ("\\Images\\" + idDC + ".jpg");
                 }
-
+                ptDiscount.ImageLocation = (apath + "\\Images\\" + crfilename);
+                ptDiscount.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            ptDiscount.ImageLocation = (apath + "\\Images\\" + crfilename);
-            ptDiscount.SizeMode = PictureBoxSizeMode.StretchImage;
+            else
+            {
+                txtpath.EditValue = "";
+            }
+           
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (isthem == true)
+            if (valid.Required(txtprice) == false)
             {
-                File.Delete(apath + "\\Images\\" + maxId + ".jpg");
-                File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + maxId + ".jpg");
+                MessageBox.Show("vui lòng nhập giá khuyến mãi");
+            }
+            else if(valid.Required(txtND)==false)
+            {
+                MessageBox.Show("Vui lòng nhập nội dung khuyến mãi");
+            }
+            else if (valid.Compare(dtStart, dtEnd) == false)
+            {
+                MessageBox.Show("Ngày bắt đầu không được trễ hơn ngày kết thúc, vui lòng kiểm tra lại");
             }
             else
             {
-                File.Delete(apath + "\\Images\\" + idDC + ".jpg");
-                File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + idDC + ".jpg");
+                if (valid.IsNum(txtprice) == false)
+                {
+                    MessageBox.Show("Giá sản phẩm không hợp lệ, vui lòng nhập lại.");
+                }
+                else
+                {
+
+                    if (isthem == true)
+                    {
+                        File.Delete(apath + "\\Images\\" + maxId + ".jpg");
+                        File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + maxId + ".jpg");
+                    }
+                    else
+                    {
+                        File.Delete(apath + "\\Images\\" + idDC + ".jpg");
+                        File.Move(apath + "\\Images\\" + crfilename, apath + "\\Images\\" + idDC + ".jpg");
+                    }
+                    busdiscount.AddEditDiscount(isthem, idDC, cboSP, txtpath, txtprice, txtND, dtStart, dtEnd);
+                }
             }
-            busdiscount.AddEditDiscount(isthem, idDC, cboSP, txtpath, txtprice, txtND, dtStart, dtEnd);
         }
 
     }

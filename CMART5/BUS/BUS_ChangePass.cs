@@ -36,7 +36,7 @@ namespace CMART5.BUS
                 {
                     return "Thư ký";
                 }
-            }catch(Exception e)
+            }catch(Exception)
             {
 
                 return "";
