@@ -239,6 +239,7 @@
             this.btn_revenue.LargeGlyph = global::CMART5.Properties.Resources.Sales_report_icon;
             this.btn_revenue.LargeWidth = 70;
             this.btn_revenue.Name = "btn_revenue";
+            this.btn_revenue.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_revenue_ItemClick);
             // 
             // pageimport
             // 

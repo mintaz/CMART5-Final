@@ -265,5 +265,21 @@ namespace CMART5
             }
 
         }
+
+        private void btn_revenue_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.checkexist(typeof(GUI.GUI_Stat));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                GUI.GUI_Stat fstat = new GUI.GUI_Stat();
+                fstat.idaccount = idacc;
+                fstat.MdiParent = this;
+                fstat.Show();
+            }
+        }
     }
 }

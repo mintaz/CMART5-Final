@@ -222,6 +222,7 @@
             this.btnPrint.StyleController = this.layoutControl1;
             this.btnPrint.TabIndex = 11;
             this.btnPrint.Text = "In Thống Kê";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnStat
             // 

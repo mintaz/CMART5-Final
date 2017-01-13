@@ -52,27 +52,27 @@ namespace CMART5
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
-            if(valid.Required(txtname))
+            if(!valid.Required(txtname))
             {
                 MessageBox.Show("Vui lòng nhập họ tên tài khoản");
             }
-            else if(valid.Required(txtaddress))
+            else if(!valid.Required(txtaddress))
             {
                 MessageBox.Show("Vui lòng nhập địa chỉ");
             }
-            else if(valid.Required(txtcmnd))
+            else if(!valid.Required(txtcmnd))
             {
                 MessageBox.Show("Vui lòng nhập số chứng minh nhân dân");
             }
-            else if (valid.Required(txtphone))
+            else if (!valid.Required(txtphone))
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại");
             }
-            else if (valid.Required(txtuser))
+            else if (!valid.Required(txtuser))
             {
                 MessageBox.Show("Vui lòng nhập tên đăng nhập");
             }
-            else if (valid.Required(txtpass))
+            else if (!valid.Required(txtpass))
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu");
             }
